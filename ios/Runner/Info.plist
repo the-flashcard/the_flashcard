@@ -41,5 +41,24 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>remote-notification</string>
+        <string>audio</string>
+    </array>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This sample uses the microphone to record your speech and convert it to text.</string>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>Used to demonstrate file picker plugin</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to demonstrate file picker plugin</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to demonstrate file picker plugin</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
 </dict>
 </plist>

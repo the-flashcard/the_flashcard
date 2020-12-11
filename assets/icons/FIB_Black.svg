@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>Component/FIB_White</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Component/FIB_White" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(2.000000, 3.200000)">
+            <g id="Group-3" transform="translate(0.000000, 1.800000)">
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="0 22 30 22 30 24 0 24"></polygon>
+                <path d="M10,1 L10,18.7473392 L13.5033669,22.5280377 L17,18.7478533 L17,1 L10,1 Z" id="Rectangle"
+                      stroke="#FFFFFF" stroke-width="2"
+                      transform="translate(13.500000, 12.000000) rotate(45.000000) translate(-13.500000, -12.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

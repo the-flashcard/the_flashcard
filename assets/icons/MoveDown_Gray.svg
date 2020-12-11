@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>IC/MoveDown_Gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IC/MoveDown_Gray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3"
+           transform="translate(15.000000, 15.000000) rotate(180.000000) translate(-15.000000, -15.000000) translate(9.000000, 3.000000)">
+            <circle id="Oval" stroke="#7B7C7D" stroke-width="2" cx="6" cy="18" r="5"></circle>
+            <polygon id="Rectangle" fill="#7B7C7D" points="5 1 7 1 7 13 5 13"></polygon>
+            <polyline id="Path-9" stroke="#7B7C7D" stroke-width="2" points="1 6 6 0 11 6"></polyline>
+        </g>
+    </g>
+</svg>

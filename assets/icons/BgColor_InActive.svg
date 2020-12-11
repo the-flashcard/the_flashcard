@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>Component/Text/BgColor_InActive</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Component/Text/BgColor_InActive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(2.000000, 5.000000)">
+            <rect id="Combined-Shape" stroke="#979797" x="0.5" y="0.5" width="19" height="14" rx="2"></rect>
+            <path d="M7.456,4.816 L9.064,4.816 L12.076,13 L10.312,13 L9.676,11.14 L6.652,11.14 L6.004,13 L4.276,13 L7.456,4.816 Z M7.06,9.916 L9.256,9.916 L8.584,7.96 C8.5039996,7.72799884 8.4340003,7.51400098 8.374,7.318 C8.3139997,7.12199902 8.25600028,6.92000104 8.2,6.712 L8.14,6.712 C8.02799944,7.13600212 7.89600076,7.55599792 7.744,7.972 L7.06,9.916 Z M14.064,8.226 L15.002,8.226 L16.759,13 L15.73,13 L15.359,11.915 L13.595,11.915 L13.217,13 L12.209,13 L14.064,8.226 Z M13.833,11.201 L15.114,11.201 L14.722,10.06 C14.6753331,9.92466599 14.6345002,9.79983391 14.5995,9.6855 C14.5644998,9.5711661 14.5306668,9.45333394 14.498,9.332 L14.463,9.332 C14.3976663,9.57933457 14.3206671,9.82433212 14.232,10.067 L13.833,11.201 Z"
+                  id="AA" fill="#7B7C7D" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

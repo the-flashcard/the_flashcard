@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>IC_Bar/Community/Active</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IC_Bar/Community/Active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(2.000000, 5.000000)">
+            <ellipse id="Oval" stroke="#FD4468" fill="#FFFFFF" cx="12" cy="14" rx="7.5" ry="4.5"></ellipse>
+            <g id="right" transform="translate(14.786607, 3.000000)" fill="#FD4468">
+                <rect id="Rectangle-Copy"
+                      transform="translate(4.500000, 9.500000) rotate(15.000000) translate(-4.500000, -9.500000) " x="1"
+                      y="6" width="7" height="7" rx="2"></rect>
+                <circle id="Oval-Copy" cx="6.71339295" cy="2.5" r="2.5"></circle>
+            </g>
+            <g id="mid" transform="translate(8.500000, 0.000000)" fill="#FD4468">
+                <rect id="Rectangle" x="0" y="6" width="7" height="7" rx="2"></rect>
+                <circle id="Oval" cx="3.5" cy="2.5" r="2.5"></circle>
+            </g>
+            <g id="left" transform="translate(0.000000, 3.000000)" fill="#FD4468">
+                <rect id="Rectangle-Copy-2"
+                      transform="translate(4.286607, 9.286607) rotate(-15.000000) translate(-4.286607, -9.286607) "
+                      x="0.78660705" y="5.78660705" width="7" height="7" rx="2"></rect>
+                <circle id="Oval-Copy-2" cx="2.5" cy="2.5" r="2.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Component/Voice_Black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Component/Voice_Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#2B2B2B" x="12.5" y="4.5" width="10" height="19" rx="5"></rect>
+        <rect id="Rectangle" fill="#2B2B2B" x="13" y="33" width="9" height="1" rx="0.5"></rect>
+        <rect id="Rectangle-Copy" fill="#2B2B2B"
+              transform="translate(17.500000, 30.000000) rotate(90.000000) translate(-17.500000, -30.000000) " x="13.5"
+              y="29.5" width="8" height="1"></rect>
+        <path d="M9,15.5 C9.29894325,22.2315141 12.1322766,25.5972711 17.5,25.5972711 C22.8677234,25.5972711 25.7010567,22.2315141 26,15.5"
+              id="Path-7" stroke="#2B2B2B" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>

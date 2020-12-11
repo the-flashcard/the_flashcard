@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>Component/TextAlign_Black</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Component/TextAlign_Black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(0.000000, 5.000000)" fill="#2B2B2B">
+            <rect id="Rectangle" x="14" y="3.276" width="20" height="3"></rect>
+            <rect id="Rectangle-Copy-3" x="14" y="9.276" width="20" height="3"></rect>
+            <rect id="Rectangle-Copy" x="0" y="15.276" width="34" height="3"></rect>
+            <rect id="Rectangle-Copy-2" x="0" y="21.276" width="34" height="3"></rect>
+            <path d="M5.004,3.55271368e-15 L6.948,3.55271368e-15 L11.61,12.276 L9.396,12.276 L8.298,9.27 L3.402,9.27 L2.286,12.276 L0.126,12.276 L5.004,3.55271368e-15 Z M3.96,7.65 L7.74,7.65 L6.606,4.5 C6.47399934,4.15199826 6.35100057,3.79200186 6.237,3.42 C6.12299943,3.04799814 6.01800048,2.70000162 5.922,2.376 L5.832,2.376 C5.73599952,2.71200168 5.62500063,3.06899811 5.499,3.447 C5.37299937,3.82500189 5.24400066,4.18199832 5.112,4.518 L3.96,7.65 Z"
+                  id="A" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

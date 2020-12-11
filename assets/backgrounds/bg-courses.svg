@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="359px" height="206px" viewBox="0 0 359 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>section</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="343" height="190" rx="16"></rect>
+        <filter x="-3.8%" y="-5.8%" width="107.6%" height="113.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.2   0 0 0 0 0.4  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home1" transform="translate(-8.000000, -676.000000)">
+            <g id="section3" transform="translate(16.000000, 647.000000)">
+                <g id="section" transform="translate(0.000000, 35.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                        <use fill="#FFEAEF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Group" mask="url(#mask-2)" fill="#FFEAEF" stroke="#FFFFFF" stroke-opacity="0.5">
+                        <g transform="translate(277.000000, -23.000000)">
+                            <circle id="Oval" stroke-width="1" cx="40" cy="40" r="40"></circle>
+                            <circle id="Oval-Copy" stroke-width="2" cx="50.5" cy="38.5" r="31.5"></circle>
+                        </g>
+                    </g>
+                    <g id="Group-Copy" mask="url(#mask-2)" fill="#FFEAEF" stroke="#FFFFFF" stroke-opacity="0.5">
+                        <g transform="translate(-3.000000, 127.000000)">
+                            <circle id="Oval" stroke-width="1" cx="40" cy="40" r="40"></circle>
+                            <circle id="Oval-Copy" stroke-width="2" cx="50.5" cy="38.5" r="31.5"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

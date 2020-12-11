@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>IC/Del_Char_White</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Review17" transform="translate(-76.000000, -566.000000)" fill-rule="nonzero">
+            <g id="edit-text" transform="translate(0.000000, 492.000000)">
+                <g id="Group-6" transform="translate(20.000000, 70.000000)">
+                    <g id="IC/Del_Char_White" transform="translate(54.000000, 0.000000)">
+                        <path d="M3.00064775,11.6800061 L7.12909585,17.8821272 C7.37146354,18.2270351 7.64431983,18.38 7.9872,18.38 L19.9872,18.38 C20.2883105,18.38 20.5392058,18.2736885 20.7664475,18.0464457 C20.9936885,17.8192058 21.1,17.5683105 21.1,17.2672 L21.1,6.0928 C21.1,5.79168952 20.9936885,5.54079417 20.7664457,5.31355251 C20.5392058,5.08631148 20.2883105,4.98 19.9872,4.98 L7.9872,4.98 C7.64431983,4.98 7.37146354,5.13296489 7.1362145,5.46746586 L3.00064775,11.6800061 Z"
+                              id="Path" stroke="#FFFFFF" stroke-width="1"></path>
+                        <polygon id="Path" fill="#FFFFFF"
+                                 points="17.5872 14.56 14.7456 11.68 17.5872 8.8 16.4544 7.6672 13.6128 10.5472 10.7328 7.6672 9.6 8.8 12.48 11.68 9.6 14.56 10.7328 15.6928 13.6128 12.8128 16.4544 15.6928"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

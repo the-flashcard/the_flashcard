@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+>
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>IC_Bar/Chatbot/Nomarl</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IC_Bar/Chatbot/Nomarl" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.000000, 3.000000)">
+            <path d="M8,0 C12.418278,0 16,3.581722 16,8 L16,8 L16,17 L13.1349052,14.1348018 C11.7454303,15.2990456 9.95457347,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z"
+                  id="Combined-Shape-Copy" stroke="#7B7C7D"
+                  transform="translate(8.000000, 8.500000) scale(-1, 1) translate(-8.000000, -8.500000) "></path>
+            <path d="M15,5 C19.418278,5 23,8.581722 23,13 L23,13 L23,22 L20.1349052,19.1348018 C18.7454303,20.2990456 16.9545735,21 15,21 C10.581722,21 7,17.418278 7,13 C7,8.581722 10.581722,5 15,5 Z"
+                  id="Combined-Shape" fill="#7B7C7D"></path>
+        </g>
+    </g>
+</svg>

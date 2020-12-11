@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>btn review</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Review1" transform="translate(-330.000000, -237.000000)">
+            <g id="Group" transform="translate(0.000000, 208.000000)">
+                <g id="btn-review" transform="translate(330.000000, 29.000000)">
+                    <circle id="Oval" stroke="#9B9B9B" cx="15" cy="15" r="14.5"></circle>
+                    <polygon id="Path-5" fill="#7B7C7D"
+                             points="15.7300044 7 15.6912857 13.1460344 19.5703658 13.1734309 13.1799525 23.1463584 13.1799525 16.3623349 10 16.3623349"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

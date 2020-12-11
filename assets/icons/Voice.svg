@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="22px" viewBox="0 0 14 22" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>IC/Del_Char_White</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Review" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Review17" transform="translate(-70.000000, -504.000000)" stroke="#FFFFFF">
+            <g id="edit-text" transform="translate(0.000000, 492.000000)">
+                <g id="heading" transform="translate(0.000000, 10.000000)">
+                    <g id="Component/Voice_White" transform="translate(65.000000, 0.000000)">
+                        <rect id="Rectangle" x="8.97058824" y="3.32352941" width="6.76470588" height="13.1176471"
+                              rx="3.38235294"></rect>
+                        <rect id="Rectangle" fill="#2B2B2B" fill-rule="evenodd" x="9.67647059" y="23.7941176"
+                              width="5.35294118" height="1" rx="0.5"></rect>
+                        <path d="M10.0294118,21.3235294 L14.6764706,21.3235294 L14.6764706,21.5294118 L14.8823529,21.3235294 L15.1764706,21.3235294 L15.0294118,21.1764706 L15.1764706,21.0294118 L14.8823529,21.0294118 L14.6764706,20.8235294 L14.6764706,21.0294118 L10.0294118,21.0294118 L10.0294118,20.8235294 L9.82352941,21.0294118 L9.52941176,21.0294118 L9.67647059,21.1764706 L9.52941176,21.3235294 L9.82352941,21.3235294 L10.0294118,21.5294118 L10.0294118,21.3235294 Z"
+                              id="Rectangle-Copy" fill="#2B2B2B" fill-rule="evenodd"
+                              transform="translate(12.352941, 21.176471) rotate(90.000000) translate(-12.352941, -21.176471) "></path>
+                        <path d="M6.35294118,10.9411765 C6.56395994,15.6928335 8.56395994,18.0686619 12.3529412,18.0686619 C16.1419224,18.0686619 18.1419224,15.6928335 18.3529412,10.9411765"
+                              id="Path-7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

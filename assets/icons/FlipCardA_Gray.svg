@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>IC/FlipCardA_Gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IC/FlipCardA_Gray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(3.000000, 2.000000)">
+            <rect id="Rectangle" fill="#7B7C7D" x="5" y="0" width="15" height="20" rx="3"></rect>
+            <g id="Group-3" transform="translate(0.000000, 15.166233)" stroke="#979797" stroke-linecap="round">
+                <path d="M18.0700389,7.3634118 C22.1780744,6.62606724 25,5.0985544 25,3.33376699 C25,2.02930742 23.4582214,0.854484467 20.9948957,0.0325814505"
+                      id="Path"></path>
+                <polyline id="Path-11" points="13 5.83376699 16 7.83376699 13 9.83376699"></polyline>
+                <path d="M4.10380306,-1.77635684e-15 C1.58303101,0.823280855 5.68434189e-14,2.01197132 5.68434189e-14,3.33376699 C5.68434189e-14,5.81904836 5.59644063,7.83376699 12.5,7.83376699 C13.3969793,7.83376699 14.2718922,7.79975491 15.1153301,7.73511779"
+                      id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

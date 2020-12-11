@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="164px" height="162px" viewBox="0 0 164 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Path Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="9.95662251%" y1="77.0732321%" x2="91.9739083%" y2="22.9267679%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M342.976106,-55.965801 C290.853135,-47.9807711 235.233271,-25.2096685 215.71125,27.9871514 C198.915152,73.8047023 228.68004,131.379521 278.765451,127.689887 C272.928119,135.950263 264.337328,142.944047 256.076953,149.08426 C253.225248,150.869198 252.089952,154.459535 253.397005,157.559507 C254.704057,160.65948 258.067249,162.353104 261.336058,161.557428 C281.51891,158.501089 305.391396,152.057995 319.516638,137.326992 C372.548251,145.367091 430.838969,149.249468 475.169652,114.115336 C515.86577,81.8448014 523.107367,27.9320822 490.64409,-13.1770545 C455.454889,-57.755549 395.622234,-64.1160384 342.976106,-55.965801 Z" id="path-3"></path>
+    </defs>
+    <g id="Signin/-Signup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g id="Register1" transform="translate(-211.000000, 0.000000)" fill-rule="nonzero">
+            <g id="Path-Copy">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                <use fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

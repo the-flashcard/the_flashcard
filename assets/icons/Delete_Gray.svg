@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>IC/Delete_Gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IC/Delete_Gray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9,9 L9,25 C9,25.5522847 9.44771525,26 10,26 L21,26 C21.5522847,26 22,25.5522847 22,25 L22,9 L9,9 Z"
+              id="Rectangle" stroke="#7B7C7D" stroke-width="2"></path>
+        <path d="M11.5,6.52034955 L11.5,5.02034955 C11.5,4.19192242 12.1715729,3.52034955 13,3.52034955 L18,3.52034955 C18.8284271,3.52034955 19.5,4.19192242 19.5,5.02034955 L19.5,6.52034955 L11.5,6.52034955 Z"
+              id="Path-8" stroke="#7B7C7D"></path>
+        <rect id="Rectangle" fill="#7B7C7D" x="6" y="5" width="19" height="2" rx="0.5"></rect>
+        <path d="M17.5,13 L17.5,23" id="Line-2-Copy" stroke="#7B7C7D" stroke-linecap="square"></path>
+        <path d="M13.5,13 L13.5,23" id="Line-2-Copy-2" stroke="#7B7C7D" stroke-linecap="square"></path>
+    </g>
+</svg>

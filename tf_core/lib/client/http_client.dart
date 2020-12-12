@@ -52,8 +52,8 @@ class HttpClient extends BaseClient {
         .then((response) {
       return _handleResult(response);
     }).catchError((e, stackTrace) {
-      _handleError(path, e);
       print(stackTrace);
+      _handleError(path, e);
     });
   }
 

@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tf_core/tf_core.dart';
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/common/xwidgets/x_state.dart';
 import 'package:the_flashcard/environment/driver_key.dart';
@@ -24,7 +25,7 @@ import 'login/login_email_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
+  Config.init(kReleaseMode ? Mode.Production : Mode.Debug);
   FlutterError.onError = (FlutterErrorDetails details) {
     if (kReleaseMode) FlutterError.dumpErrorToConsole(details);
     Zone.current.handleUncaughtError(details.exception, details.stack);
@@ -101,6 +102,7 @@ class _AppState extends XState<App> with WidgetsBindingObserver {
           builder: (BuildContext context, AuthenticationState state) {
             Dimens.context = context;
             switch (state.runtimeType) {
+              case Authenticating:
               case AuthenticationUninitialized:
                 return SplashScreen();
               case Authenticated:

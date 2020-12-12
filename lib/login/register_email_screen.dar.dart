@@ -4,30 +4,30 @@ import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tf_core/tf_core.dart' show DI, Config;
 import 'package:the_flashcard/common/common.dart';
+import 'package:the_flashcard/login/register_bloc.dart';
 import 'package:the_flashcard/login/x_textfield_widget.dart';
 
-import 'login_bloc.dart';
-import 'register_email_screen.dar.dart';
+class RegisterEmailScreen extends StatefulWidget {
+  static final name = '/register_email_screen';
 
-class LoginEmailScreen extends StatefulWidget {
-  static final name = '/login_email_screen';
+  RegisterEmailScreen({Key key}) : super(key: key);
 
-  LoginEmailScreen({Key key}) : super(key: key);
-
-  _LoginEmailScreenState createState() => _LoginEmailScreenState();
+  _RegisterEmailScreenState createState() => _RegisterEmailScreenState();
 }
 
-class _LoginEmailScreenState extends XState<LoginEmailScreen> {
-  LoginBloc bloc;
+class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
+  RegisterBloc bloc;
   TextEditingController emailController;
   TextEditingController passwordController;
+  TextEditingController fullNameController;
   FocusNode emailNode;
   FocusNode passwordNode;
+  FocusNode fullNameNode;
 
   @override
   void initState() {
     super.initState();
-    bloc = LoginBloc();
+    bloc = RegisterBloc();
     emailController = TextEditingController()
       ..addListener(() {
         bloc.add(EmailChanged(emailController.text));
@@ -36,8 +36,13 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
       ..addListener(() {
         bloc.add(PasswordChanged(passwordController.text));
       });
+    fullNameController = TextEditingController()
+      ..addListener(() {
+        bloc.add(FullNameChanged(passwordController.text));
+      });
     emailNode = FocusNode();
     passwordNode = FocusNode();
+    fullNameNode = FocusNode();
   }
 
   @override
@@ -51,7 +56,7 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocConsumer<LoginBloc, LoginState>(
+      body: BlocConsumer<RegisterBloc, RegisterState>(
         bloc: bloc,
         listener: _onStateChanged,
         builder: (_, state) {
@@ -214,6 +219,33 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
                                             )
                                           : SizedBox(),
                                       Container(
+                                        margin: EdgeInsets.only(top: 40),
+                                        child: XTextFieldWidget(
+                                          color: XedColors.black10,
+                                          textInputType: TextInputType.text,
+                                          icon: Icon(
+                                            Icons.person,
+                                            color: XedColors.color_178_178_178,
+                                            size: 20,
+                                          ),
+                                          textStyle:
+                                              RegularTextStyle(16).copyWith(
+                                            color: XedColors.color_41_51_58,
+                                            fontSize: 16,
+                                          ),
+                                          hintStyle:
+                                              RegularTextStyle(16).copyWith(
+                                            color: XedColors.color_178_178_178,
+                                            fontSize: 16,
+                                          ),
+                                          hintText: "Your name",
+                                          node: emailNode,
+                                          controller: emailController,
+                                          onSubmitted: (_) =>
+                                              passwordNode.requestFocus(),
+                                        ),
+                                      ),
+                                      Container(
                                         margin: EdgeInsets.only(top: 25),
                                         width: double.infinity,
                                         child: XedButtons.colorCTA(
@@ -244,12 +276,6 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
                                         ),
                                       ),
                                       Spacer(),
-                                      _buildForgetPassword(onTap: () {
-                                        navigateToScreen(
-                                          screen: RegisterEmailScreen(),
-                                          name: RegisterEmailScreen.name,
-                                        );
-                                      }),
                                     ],
                                   ),
                                 ),
@@ -262,6 +288,15 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
                   );
                 },
               ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: SafeArea(
+                  child: XedButtons.leadingButton(
+                    padding: EdgeInsets.all(8),
+                    onPressed: () => Navigator.of(context).pop(),
+                  ),
+                ),
+              )
             ],
           );
         },
@@ -269,7 +304,7 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
     );
   }
 
-  void _onStateChanged(BuildContext context, LoginState state) {
+  void _onStateChanged(BuildContext context, RegisterState state) {
     if (state.isFailure) {
       showErrorSnakeBar(state.error, context: context);
     } else if (state.isSuccess) {
@@ -302,28 +337,12 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
     );
   }
 
-  Widget _buildForgetPassword({VoidCallback onTap}) {
-    return Center(
-      child: InkWell(
-        onTap: onTap,
-        child: Text(
-          "Register",
-          textAlign: TextAlign.center,
-          style: RegularTextStyle(16).copyWith(
-            color: XedColors.color_178_178_178,
-            fontSize: 16,
-            decoration: TextDecoration.underline,
-          ),
-        ),
-      ),
-    );
-  }
-
   void handleLoginPress() {
     bloc.add(
-      LoginPressed(
+      RegisterPressed(
         email: emailController.text.toLowerCase().trim(),
         password: passwordController.text.trim(),
+        fullName: fullNameController.text,
       ),
     );
   }

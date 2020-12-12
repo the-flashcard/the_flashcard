@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:ddi/di.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tf_core/tf_core.dart';
 import 'package:the_flashcard/environment/driver_key.dart';
@@ -62,7 +61,6 @@ class AuthenticationBloc
   }
 
   Future _initDI(AuthenticationBloc bloc) async {
-    Config.init(kReleaseMode ? Mode.Production : Mode.Debug);
     var hiveStorage = HiveStorage();
     await hiveStorage.init();
     var mainModule = DevModule(hiveStorage);

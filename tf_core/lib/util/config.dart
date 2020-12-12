@@ -1,8 +1,6 @@
 import 'dart:core';
 import 'dart:io';
 
-// import 'package:firebase_remote_config/firebase_remote_config.dart' as frc;
-
 import 'package:tf_core/tf_core.dart';
 
 enum Mode { Debug, Production }
@@ -263,10 +261,10 @@ class Config {
   };
   static Map<String, dynamic> _production = {
     'key': 'value',
-    "api_host": "http://theflascard.tk/api",
-    'web_host': 'http://theflascard.tk',
-    "upload_host": "http://media.theflascard.tk",
-    "static_host": "http://media.theflascard.tk/static",
+    "api_host": "http://theflashcard.tk/api",
+    'web_host': 'http://theflashcard.tk',
+    "upload_host": "http://media.theflashcard.tk",
+    "static_host": "http://media.theflashcard.tk/static",
     "protocol": "http://",
     "PAGING_DECK_SIZE": 20,
     "min_version": 2,

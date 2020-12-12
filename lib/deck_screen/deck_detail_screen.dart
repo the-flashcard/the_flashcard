@@ -1,3 +1,4 @@
+import 'package:ddi/di.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -53,20 +54,20 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
     bloc = CardListBloc();
     deckBloc = DeckBloc.edit(
         bloc,
-        BlocProvider.of<MyDeckBloc>(context),
-        BlocProvider.of<GlobalDeckBloc>(context),
-        BlocProvider.of<TrendingDeckBloc>(context),
-        BlocProvider.of<NewDeckBloc>(context),
+        DI.get<MyDeckBloc>(MyDeckBloc),
+        DI.get<GlobalDeckBloc>(GlobalDeckBloc),
+        DI.get<TrendingDeckBloc>(TrendingDeckBloc),
+        DI.get<NewDeckBloc>(NewDeckBloc),
         widget.deck);
     votingBloc = VotingBloc(
-      BlocProvider.of<FavoriteDeckBloc>(context),
-      BlocProvider.of<TrendingDeckBloc>(context),
+      DI.get<FavoriteDeckBloc>(FavoriteDeckBloc),
+      DI.get<TrendingDeckBloc>(TrendingDeckBloc),
     );
     learnBloc = LearnCardBloc(
       cardListCubit: bloc,
-      dueCardCubit: BlocProvider.of<DueReviewBloc>(context),
-      learningCardCubit: BlocProvider.of<LearningReviewBloc>(context),
-      doneCardCubit: BlocProvider.of<DoneReviewBloc>(context),
+      dueCardCubit: DI.get<DueReviewBloc>(DueReviewBloc),
+      learningCardCubit: DI.get<LearningReviewBloc>(LearningReviewBloc),
+      doneCardCubit: DI.get<DoneReviewBloc>(DoneReviewBloc),
     );
     // optionChosen = [false, false, false, false, false];
 
@@ -698,9 +699,9 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
   String _getUserName(core.Deck deck) {
     String result = '';
     if (deck?.ownerDetail != null) {
-      result = deck.ownerDetail.fullName;
+      result = deck.ownerDetail.fullName ?? '';
     } else {
-      result = deck.username;
+      result = deck.username ?? '';
     }
     return result;
   }

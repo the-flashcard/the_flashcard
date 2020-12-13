@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ddi/di.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:the_flashcard/common/cached_image/x_file_cached_manager.dart';
+import 'package:the_flashcard/common/cached_image/file_cache.dart';
 import 'package:the_flashcard/common/common.dart';
 
-class XCachedImageWidget extends StatelessWidget {
-  static XFileCachedManager cachedManager = DI.get("image_cache_manager");
+class CachedImage extends StatelessWidget {
+  static FileCache cachedManager = DI.get("image_cache_manager");
 
   final double width;
   final double height;
@@ -20,7 +20,7 @@ class XCachedImageWidget extends StatelessWidget {
   /// Widget displayed while the target [imageUrl] failed loading.
   final LoadingErrorWidgetBuilder errorWidget;
 
-  const XCachedImageWidget({
+  const CachedImage({
     Key key,
     @required this.url,
     this.width,

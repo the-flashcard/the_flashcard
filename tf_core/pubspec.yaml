@@ -5,7 +5,7 @@ author:
 homepage:
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,7 +15,7 @@ dependencies:
   hive_flutter: 0.3.1
   ansicolor: 1.0.5
   http: 0.12.2
-  path_provider: 1.6.5
+  path_provider: 1.6.24
   intl: 0.16.1
 dev_dependencies:
   flutter_test:

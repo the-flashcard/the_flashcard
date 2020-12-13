@@ -1,88 +1,16 @@
+import 'dart:async';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:tf_core/tf_core.dart';
 
+part 'notification_event.dart';
+part 'notification_state.dart';
+
 class NotificationType {
   static final int ERROR = 0;
   static final int SUCCESS = 1;
-}
-
-abstract class NotificationEvent {}
-
-class ErrorNotification extends NotificationEvent {
-  dynamic error;
-
-  ErrorNotification(this.error);
-}
-
-class AddNotification extends NotificationEvent {
-  int notificationType;
-  String mesage;
-
-  AddNotification(this.notificationType, this.mesage);
-}
-
-class HideNotification extends NotificationEvent {}
-
-abstract class NotificationState extends Equatable {
-  final Color color;
-  final String message;
-
-  NotificationState(
-    this.color,
-    this.message,
-  );
-
-  bool get hasNotification => message != null;
-
-  NotificationState hide() {
-    return NotificationHide();
-  }
-
-  NotificationState show({Color color, String message}) {
-    return NotificationShow(
-      color ?? this.color,
-      message ?? this.message,
-    );
-  }
-
-  NotificationState copyWith({
-    String message,
-  });
-
-  @override
-  List get props => [color?.value, this.message];
-}
-
-class NotificationHide extends NotificationState {
-  NotificationHide()
-      : super(
-          Colors.green,
-          "",
-        );
-
-  NotificationState copyWith({
-    Color color,
-    String message,
-  }) {
-    return NotificationHide();
-  }
-}
-
-class NotificationShow extends NotificationState {
-  NotificationShow(Color color, String message)
-      : super(
-          color,
-          message,
-        );
-
-  NotificationState copyWith({Color color, String message}) {
-    return NotificationShow(
-      color ?? color,
-      message ?? this.message,
-    );
-  }
 }
 
 class NotificationBloc extends Bloc<NotificationEvent, NotificationState> {
@@ -111,7 +39,7 @@ class NotificationBloc extends Bloc<NotificationEvent, NotificationState> {
   Stream<NotificationState> _show(AddNotification event) async* {
     yield state.show(
       color: getColor(event.notificationType),
-      message: event.mesage,
+      message: event.message,
     );
   }
 

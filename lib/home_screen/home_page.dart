@@ -8,7 +8,6 @@ import 'package:the_flashcard/deck_screen/search_deck_screen.dart';
 import 'package:the_flashcard/home_screen/overview/overview.dart';
 import 'package:the_flashcard/home_screen/trending_deck_widget.dart';
 import 'package:the_flashcard/home_screen/welcome_page.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
 
 import 'new_deck_widget.dart';
 
@@ -168,7 +167,7 @@ Widget _buildLogo({VoidCallback onTap}) {
         String thumbnailUrl = state.loginData.userProfile?.avatar ?? '';
         return GestureDetector(
           onTap: onTap,
-          child: XCachedImageWidget(
+          child: CachedImage(
             url: thumbnailUrl,
             imageBuilder: (_, imageProvider) {
               return Container(

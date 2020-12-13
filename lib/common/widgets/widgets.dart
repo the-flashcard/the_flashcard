@@ -16,3 +16,4 @@ export 'x_answer_multi_widget.dart';
 export 'x_answer_text_widget.dart';
 export 'x_button_sheet_action_widget.dart';
 export 'x_float_button.dart';
+export 'cached_image.dart';

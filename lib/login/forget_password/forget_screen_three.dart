@@ -6,7 +6,6 @@ import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/common/resources/xed_buttons.dart';
 import 'package:the_flashcard/common/widgets/x_edit_text_view.dart';
 import 'package:the_flashcard/common/xwidgets/x_state.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
 import 'package:the_flashcard/login/login_email_screen.dart';
 
 class ForgetScreenThree extends StatefulWidget {

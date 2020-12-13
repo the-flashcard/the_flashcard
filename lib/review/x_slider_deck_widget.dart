@@ -2,15 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/assets.dart';
-import 'package:the_flashcard/common/resources/dimens.dart';
-import 'package:the_flashcard/common/resources/xed_colors.dart';
-import 'package:the_flashcard/common/resources/xed_shadows.dart';
-import 'package:the_flashcard/common/resources/xed_text_styles.dart';
-import 'package:the_flashcard/common/widgets/deck_thumnail_default.dart';
-import 'package:the_flashcard/common/xwidgets/x_state.dart';
 import 'package:the_flashcard/deck_screen/card_view/multi_card_detail_screen.dart';
 import 'package:the_flashcard/onboarding/onboarding.dart';
 import 'package:the_flashcard/review/progress/review_progress_screen.dart';
@@ -176,7 +168,7 @@ class _XSliderDeckWidgetState extends XState<XSliderDeckWidget> {
   Widget _image(String thumbnail) {
     bool hasThumbnail = thumbnail?.isEmpty == false ?? true;
     return hasThumbnail
-        ? XCachedImageWidget(
+        ? CachedImage(
             width: wp(52),
             height: wp(52),
             url: thumbnail,

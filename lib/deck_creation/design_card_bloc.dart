@@ -5,8 +5,7 @@ import 'package:bloc/bloc.dart';
 import 'package:ddi/di.dart';
 import 'package:flutter/widgets.dart' as ui;
 import 'package:tf_core/tf_core.dart';
-import 'package:the_flashcard/common/notification/notification_bloc.dart';
-import 'package:the_flashcard/common/xwidgets/x_flipper_widget.dart';
+import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/deck_screen/deck_bloc.dart';
 
 import 'design_card_event.dart';

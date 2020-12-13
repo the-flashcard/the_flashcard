@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:ddi/di.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:tf_core/tf_core.dart';
-import 'package:the_flashcard/common/cached_image/x_file_cached_manager.dart';
 
 class XAudioPlayer {
-  static XFileCachedManager cachedManager = DI.get("audio_cache_manager");
+  static BaseCacheManager cachedManager = DI.get("audio_cache_manager");
 
   final AudioPlayer _player = AudioPlayer();
 

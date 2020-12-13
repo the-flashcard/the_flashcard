@@ -1,12 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ddi/di.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:the_flashcard/common/cached_image/file_cache.dart';
 import 'package:the_flashcard/common/common.dart';
 
 class CachedImage extends StatelessWidget {
-  static FileCache cachedManager = DI.get("image_cache_manager");
+  static BaseCacheManager cachedManager = DI.get("image_cache_manager");
 
   final double width;
   final double height;

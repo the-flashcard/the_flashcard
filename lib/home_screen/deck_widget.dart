@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/dimens.dart';
 
 class DeckWidget extends StatelessWidget {
   final String title;
@@ -68,7 +66,7 @@ class DeckWidget extends StatelessWidget {
                 alignment: FractionalOffset.bottomLeft,
                 children: <Widget>[
                   thumbnail != null
-                      ? XCachedImageWidget(
+                      ? CachedImage(
                           url: thumbnail,
                           width: double.infinity,
                           height: double.infinity,

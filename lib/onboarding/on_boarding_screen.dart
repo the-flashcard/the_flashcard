@@ -6,7 +6,6 @@ import 'package:tf_core/tf_core.dart' as core;
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/common/resources/xed_buttons.dart';
 import 'package:the_flashcard/common/widgets/dot_indicator.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   static const name = '/on_boarding_screen';

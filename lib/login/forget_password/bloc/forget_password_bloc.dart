@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:ddi/di.dart';
 import 'package:tf_core/tf_core.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
+import 'package:the_flashcard/common/common.dart';
 
 part 'forget_password_event.dart';
 part 'forget_password_state.dart';

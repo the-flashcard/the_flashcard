@@ -7,7 +7,7 @@ import 'package:the_flashcard/common/resources/xed_colors.dart';
 import 'package:the_flashcard/common/resources/xed_progress.dart';
 import 'package:the_flashcard/common/widgets/x_edit_text_view.dart';
 import 'package:the_flashcard/common/xwidgets/x_state.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
+
 import 'package:the_flashcard/login/register_bloc.dart' as regist;
 import 'package:the_flashcard/login/verification_screen.dart';
 

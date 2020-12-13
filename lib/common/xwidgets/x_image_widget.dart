@@ -3,10 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/xed_progress.dart';
-import 'package:the_flashcard/common/xwidgets/x_component_widget.dart';
 
 class XImageWidget extends XComponentWidget<core.Image> {
   final PhotoViewControllerBase controller = PhotoViewController();
@@ -58,7 +55,7 @@ class XImageWidget extends XComponentWidget<core.Image> {
           ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(hp(15.0))),
             child: componentData.url != null
-                ? XCachedImageWidget(
+                ? CachedImage(
                     url: componentData.url,
                     height: hp(
                       componentData.imageConfig.height ??

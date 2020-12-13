@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/notification/notification_receiver.dart';
 import 'package:the_flashcard/deck_screen/deck_detail_screen.dart';
 import 'package:the_flashcard/deck_screen/deck_edit_screen.dart';
 import 'package:the_flashcard/deck_screen/deck_list_bloc.dart';
@@ -17,7 +16,6 @@ import 'package:the_flashcard/home_screen/overview/bloc/statistic_bloc.dart';
 import 'package:the_flashcard/home_screen/setting_screen/my_profile_screen.dart';
 import 'package:the_flashcard/home_screen/trending_deck_bloc.dart'
     as trending_bloc;
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
 import 'package:the_flashcard/onboarding/onboarding.dart';
 import 'package:the_flashcard/overlay_manager.dart';
 import 'package:the_flashcard/review/review_list_bloc.dart';

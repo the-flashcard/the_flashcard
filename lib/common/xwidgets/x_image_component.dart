@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/xed_progress.dart';
-import 'package:the_flashcard/common/xwidgets/x_component_widget.dart';
 
 class XImageComponent extends XComponentWidget<core.Image> {
   XImageComponent({
@@ -34,7 +31,7 @@ class XImageComponent extends XComponentWidget<core.Image> {
     core.Text textComponent;
     if (hasTextComponent)
       textComponent = this.componentData?.getTextComponent();
-    return XCachedImageWidget(
+    return CachedImage(
       url: componentData.url,
       height: hp(
         componentData?.imageConfig?.height ?? core.ImageConfig.DEF_HEIGHT,

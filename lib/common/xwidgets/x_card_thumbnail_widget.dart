@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
-import 'package:the_flashcard/common/resources/assets.dart';
-import 'package:the_flashcard/common/resources/dimens.dart';
-import 'package:the_flashcard/common/resources/xed_colors.dart';
-import 'package:the_flashcard/common/xwidgets/xwidgets.dart';
+import 'package:the_flashcard/common/common.dart';
 
 class XCardThumbnailWidget extends StatelessWidget {
   final core.Card card;
@@ -148,7 +144,7 @@ class VideoWidget extends StatelessWidget {
         core.VideoUtils.getThumbFromVideoUrl(this.component.url);
 
     return thumbnail is String
-        ? XCachedImageWidget(
+        ? CachedImage(
             url: thumbnail,
             imageBuilder: (BuildContext context, ImageProvider imageProvider) {
               return Stack(
@@ -268,7 +264,7 @@ class _ImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return XCachedImageWidget(
+    return CachedImage(
       url: component.url,
       imageBuilder: (BuildContext context, ImageProvider imageProvider) {
         final bool hasText = hasTextComponent();

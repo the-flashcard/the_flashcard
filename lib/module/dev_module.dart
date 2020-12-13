@@ -4,10 +4,8 @@ import 'package:ddi/di.dart';
 import 'package:ddi/module.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter_cache_manager/flutter_cache_manager.dart' as cached;
 import 'package:tf_core/tf_core.dart';
-import 'package:the_flashcard/common/cached_image/x_file_cached_manager.dart';
 import 'package:the_flashcard/deck_creation/audio/x_audio_player.dart';
 import 'package:the_flashcard/error_handling_service.dart';
 import 'package:the_flashcard/overlay_manager.dart';
@@ -69,35 +67,24 @@ class DevModule extends AbstractModule {
     bind(SearchImageService).to(_searchImageService());
   }
 
-  FileFetcherResponse _handleErrorCacheImage(dynamic ex, String url) {
-    Log.error('XFileCachedManager:: Error load $url, $ex');
-    return HttpFileFetcherResponse(null);
+  cached.BaseCacheManager _buildImageCachedManager() {
+    final cached.Config cachedConfig = cached.Config(
+      'image_cache',
+      maxNrOfCacheObjects: 50,
+      stalePeriod: Duration(days: 7),
+      fileService: cached.HttpFileService(),
+    );
+    return cached.CacheManager(cachedConfig);
   }
 
-  XFileCachedManager _buildImageCachedManager() {
-    final Duration connectTimeout = Duration(seconds: 10);
-    FileFetcher fileFetcher = (String url, {Map<String, String> headers}) {
-      return http
-          .get(url)
-          .timeout(connectTimeout)
-          .then((response) => HttpFileFetcherResponse(response))
-          .catchError((ex) => _handleErrorCacheImage(ex, url));
-    };
-
-    return XFileCachedManager(
-      "x_image_cache",
-      maxAgeCachedDays: 7,
-      totalCachedObjects: 50,
-      fileFetcher: fileFetcher,
+  cached.BaseCacheManager _buildAudioCachedManager() {
+    final cached.Config cachedConfig = cached.Config(
+      'audio_cache',
+      maxNrOfCacheObjects: 50,
+      stalePeriod: Duration(days: 15),
+      fileService: cached.HttpFileService(),
     );
-  }
-
-  XFileCachedManager _buildAudioCachedManager() {
-    return XFileCachedManager(
-      "x_audio_cache",
-      maxAgeCachedDays: 15,
-      totalCachedObjects: 50,
-    );
+    return cached.CacheManager(cachedConfig);
   }
 
   HttpClient _buildAuthAPIClient() {

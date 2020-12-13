@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/deck_creation/audio/x_audio_player.dart';
 
@@ -94,7 +93,7 @@ class XAnswerMultiWidget extends StatelessWidget {
     double height,
     BorderRadius borderRadius,
   ) {
-    return XCachedImageWidget(
+    return CachedImage(
       url: url,
       height: height,
       imageBuilder: (_, ImageProvider imageProvider) {

@@ -3,16 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/notification/notification_receiver.dart';
-import 'package:the_flashcard/common/resources/xed_buttons.dart';
-import 'package:the_flashcard/common/resources/xed_progress.dart';
-import 'package:the_flashcard/common/resources/xed_shadows.dart';
-import 'package:the_flashcard/common/widgets/deck_thumnail_default.dart';
-import 'package:the_flashcard/common/widgets/share_feedback_bottom_sheet_widget.dart';
-import 'package:the_flashcard/common/xwidgets/x_card_thumbnail_widget.dart';
-import 'package:the_flashcard/common/xwidgets/x_state.dart';
 import 'package:the_flashcard/deck_screen/card_list_bloc.dart';
 import 'package:the_flashcard/deck_screen/card_view/learn_card_screen.dart';
 import 'package:the_flashcard/deck_screen/deck_bloc.dart';
@@ -216,7 +207,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
     return AspectRatio(
       aspectRatio: 0.75,
       child: widget.deck.hasThumbnail
-          ? XCachedImageWidget(
+          ? CachedImage(
               url: widget.deck.thumbnail,
               width: wp(107),
               decoration: BoxDecoration(
@@ -648,7 +639,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
 
   Widget _buildAvatar(String avatar) {
     return avatar != null && avatar.isNotEmpty
-        ? XCachedImageWidget(
+        ? CachedImage(
             url: avatar,
             errorWidget: (_, __, ___) {
               return XedIcon.iconDefaultAvatar(hp(25), wp(25));

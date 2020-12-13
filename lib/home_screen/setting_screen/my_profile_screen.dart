@@ -7,8 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/deck_creation/deck_creation.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
-
 import 'avatar_user_widget.dart';
 
 class MyProfileScreen extends StatefulWidget {

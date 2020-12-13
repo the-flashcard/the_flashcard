@@ -5,8 +5,7 @@ import 'package:ddi/di.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'package:tf_core/tf_core.dart';
-import 'package:the_flashcard/common/notification/notification_bloc.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
+import 'package:the_flashcard/common/common.dart';
 
 abstract class DeckListEvent extends Equatable {
   DeckListEvent([this.props = const []]);

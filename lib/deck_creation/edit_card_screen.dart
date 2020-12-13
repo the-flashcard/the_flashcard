@@ -12,7 +12,6 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:tf_core/tf_core.dart' as core;
 
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/notification/notification_receiver.dart';
 import 'package:the_flashcard/deck_creation/deck_creation.dart';
 import 'package:the_flashcard/deck_creation/design_card_event.dart';
 import 'package:the_flashcard/deck_creation/edit_controller.dart';

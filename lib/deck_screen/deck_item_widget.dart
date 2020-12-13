@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/common/resources/assets.dart';
 import 'package:the_flashcard/common/resources/dimens.dart';
@@ -116,7 +115,7 @@ class DeckItemWidget extends StatelessWidget {
 
   Widget _buildThumbnailDeck(core.Deck deck) {
     if (deck?.hasThumbnail ?? false) {
-      return XCachedImageWidget(
+      return CachedImage(
         width: THUMB_WITH,
         height: THUMB_HEIGHT,
         url: deck?.thumbnail ?? '',
@@ -263,7 +262,7 @@ class DeckItemWidget extends StatelessWidget {
       child: deck.ownerDetail != null &&
               deck.ownerDetail.avatar != null &&
               deck.ownerDetail.avatar.isNotEmpty
-          ? XCachedImageWidget(
+          ? CachedImage(
               width: 32,
               height: 32,
               url: deck.ownerDetail.avatar,
@@ -327,7 +326,7 @@ class DeckListItemWidget extends StatelessWidget implements OnboardingObject {
 
   Widget _buildDeckItemThumbnail() {
     return deck?.hasThumbnail ?? false
-        ? XCachedImageWidget(
+        ? CachedImage(
             url: deck.thumbnail,
             width: THUMB_WITH,
             height: THUMB_HEIGHT,

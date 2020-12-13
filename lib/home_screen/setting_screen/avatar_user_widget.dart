@@ -38,7 +38,7 @@ class AvatarUserWidget extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Center(
-                  child: XCachedImageWidget(
+                  child: CachedImage(
                     url: url,
                     width: hp(116),
                     height: hp(116),

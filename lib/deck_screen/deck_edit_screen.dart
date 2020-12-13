@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/deck_creation/deck_creation.dart';
 import 'package:the_flashcard/deck_creation/edit_card_screen.dart';
@@ -203,7 +202,9 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
             return XedButtons.iconCircleButton(
               onTap: widget.isCreation
                   ? null
-                  : state is! Liking ? () => XError.f0(_onLikePressed) : null,
+                  : state is! Liking
+                      ? () => XError.f0(_onLikePressed)
+                      : null,
               child: Icon(
                 Icons.favorite_border,
                 size: 28.0,
@@ -326,7 +327,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
       child: Stack(
         children: <Widget>[
           deckState.deck?.thumbnail?.isNotEmpty == true
-              ? XCachedImageWidget(
+              ? CachedImage(
                   width: w107,
                   url: deckState.deck.thumbnail,
                   imageBuilder: (_, imageProvider) {

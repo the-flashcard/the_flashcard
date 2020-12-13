@@ -24,7 +24,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   audioplayers: 0.14.1
   auto_size_text: 2.1.0
-  cached_network_image: 2.0.0
+  cached_network_image: 2.4.1
   charts_flutter: 0.9.0
   chewie: 0.9.10
   cupertino_icons: 0.1.2
@@ -36,7 +36,7 @@ dependencies:
   flip: 1.0.0
   flutter_animation_progress_bar: 1.0.0
   flutter_bloc: 3.2.0
-  flutter_cache_manager: 1.4.1
+  flutter_cache_manager: 2.0.0
   flutter_circular_chart: 0.1.0
   flutter_custom_clippers: 1.1.0
   flutter_flip_view: 1.0.3
@@ -51,8 +51,7 @@ dependencies:
   intl: 0.16.1
   open_iconic_flutter: 0.3.0
   outline_material_icons: 0.1.0
-  package_info: 0.4.0+12
-  path_provider: 1.6.5
+  path_provider: 1.6.24
   photo_view: 0.9.2
   pull_to_refresh: 1.5.8
   rich_text_controller: 1.1.0

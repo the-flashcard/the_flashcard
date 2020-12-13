@@ -12,7 +12,7 @@ import 'package:the_flashcard/environment/driver_key.dart';
 import 'package:the_flashcard/home_screen/overview/bloc/statistic_bloc.dart';
 import 'package:the_flashcard/home_screen/trending_deck_bloc.dart';
 import 'package:the_flashcard/home_screen/welcome_page.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
+
 import 'package:the_flashcard/onboarding/on_boarding_screen.dart';
 import 'package:the_flashcard/onboarding/splash_screen.dart';
 import 'package:the_flashcard/review/review_list_bloc.dart';

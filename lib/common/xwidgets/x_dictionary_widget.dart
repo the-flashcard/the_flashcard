@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/common/xwidgets/xwidgets.dart';
 import 'package:the_flashcard/deck_creation/audio/x_audio_player.dart';
@@ -49,7 +48,7 @@ class XDictionaryWidget extends XComponentWidget<core.Dictionary> {
 
   Widget _buildImage(String url) {
     return url?.isNotEmpty == true
-        ? XCachedImageWidget(
+        ? CachedImage(
             url: url,
             imageBuilder: (_, ImageProvider imageProvider) {
               return AspectRatio(

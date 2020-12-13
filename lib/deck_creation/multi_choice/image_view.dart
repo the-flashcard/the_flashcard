@@ -18,7 +18,7 @@ class _ImageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return url == null || url.trim().isEmpty
         ? _defaultImage()
-        : XCachedImageWidget(
+        : CachedImage(
             url: url,
             width: width,
             height: height,

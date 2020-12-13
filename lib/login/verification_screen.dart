@@ -7,7 +7,7 @@ import 'package:the_flashcard/common/resources/resources.dart';
 import 'package:the_flashcard/common/resources/xed_progress.dart';
 import 'package:the_flashcard/common/widgets/x_verify_edit_text.dart';
 import 'package:the_flashcard/common/xwidgets/x_state.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
+
 import 'package:the_flashcard/login/verify_bloc.dart';
 
 class VerificationScreen extends StatefulWidget {

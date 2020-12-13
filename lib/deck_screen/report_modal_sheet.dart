@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tf_core/tf_core.dart' as core;
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/xed_buttons.dart';
-import 'package:the_flashcard/common/resources/xed_sheets.dart';
 import 'package:the_flashcard/deck_creation/multi_choice/bloc/multi_choice_bloc.dart';
 import 'package:the_flashcard/deck_screen/report_option.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
 
 class ReportModalSheet extends StatefulWidget {
   final String deckId;

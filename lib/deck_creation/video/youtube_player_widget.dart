@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_youtube/flutter_youtube.dart';
 import 'package:tf_core/tf_core.dart' as core;
-import 'package:the_flashcard/common/cached_image/x_cached_image_widget.dart';
 import 'package:the_flashcard/common/common.dart';
 
 class YoutubePlayerWidget extends StatelessWidget {
@@ -19,7 +18,7 @@ class YoutubePlayerWidget extends StatelessWidget {
         alignment: Alignment.center,
         children: <Widget>[
           thumbnail is String
-              ? XCachedImageWidget(
+              ? CachedImage(
                   url: thumbnail,
                   imageBuilder: (_, ImageProvider imageProvider) {
                     return Container(

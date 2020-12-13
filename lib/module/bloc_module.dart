@@ -1,15 +1,14 @@
-import 'package:bloc/bloc.dart';
 import 'package:ddi/module.dart';
 import 'package:flutter/foundation.dart';
 import 'package:tf_core/tf_core.dart';
-import 'package:the_flashcard/common/notification/notification_bloc.dart';
+import 'package:the_flashcard/common/common.dart';
 import 'package:the_flashcard/deck_creation/image/search_image_bloc/image_list_bloc.dart';
 import 'package:the_flashcard/deck_screen/category_bloc.dart';
 import 'package:the_flashcard/deck_screen/deck_list_bloc.dart';
 import 'package:the_flashcard/home_screen/overview/bloc/statistic_bloc.dart';
 import 'package:the_flashcard/home_screen/trending_deck_bloc.dart';
 import 'package:the_flashcard/home_screen/welcome_page.dart';
-import 'package:the_flashcard/login/authentication/authentication_bloc.dart';
+
 import 'package:the_flashcard/review/review_list_bloc.dart';
 
 class BlocModule extends AbstractModule {

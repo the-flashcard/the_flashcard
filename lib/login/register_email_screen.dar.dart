@@ -219,7 +219,7 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                             )
                                           : SizedBox(),
                                       Container(
-                                        margin: EdgeInsets.only(top: 40),
+                                        margin: EdgeInsets.only(top: 12),
                                         child: XTextFieldWidget(
                                           color: XedColors.black10,
                                           textInputType: TextInputType.text,
@@ -239,10 +239,8 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                             fontSize: 16,
                                           ),
                                           hintText: "Your name",
-                                          node: emailNode,
-                                          controller: emailController,
-                                          onSubmitted: (_) =>
-                                              passwordNode.requestFocus(),
+                                          controller: fullNameController,
+                                          node: fullNameNode,
                                         ),
                                       ),
                                       Container(
@@ -255,7 +253,7 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               Text(
-                                                "Sign in",
+                                                "Register",
                                                 style: SemiBoldTextStyle(18)
                                                     .copyWith(
                                                   color: XedColors.white255,

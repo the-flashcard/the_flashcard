@@ -125,14 +125,14 @@ class _SearchImageScreenState extends XState<SearchImageScreen> {
     }
 
     return BlocListener(
-      bloc: bloc,
+      cubit: bloc,
       listener: (BuildContext context, ImageListState state) {
         if (state is! ImageListLoading) _finishRefresh(refreshController);
         if (state is ImageListError)
           showErrorSnakeBar(state.errorMessage, context: context);
       },
       child: BlocBuilder<ImageListBloc, ImageListState>(
-        bloc: bloc,
+        cubit: bloc,
         builder: (context, state) {
           return Stack(
             children: <Widget>[

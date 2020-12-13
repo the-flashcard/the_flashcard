@@ -40,7 +40,7 @@ class _DueReviewScreenState extends XState<DueReviewScreen>
   Widget build(BuildContext context) {
     Dimens.context = context;
     return BlocConsumer<DueReviewBloc, ReviewListState>(
-      bloc: dueBloc,
+      cubit: dueBloc,
       listener: (BuildContext context, state) {
         if (state is! ReviewListLoading) {
           if (DueReviewScreen.refreshController.isLoading) {

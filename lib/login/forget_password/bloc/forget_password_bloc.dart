@@ -18,9 +18,7 @@ class ForgetPasswordBloc
 
   ForgetPasswordBloc()
       : email = '',
-        token = '';
-  @override
-  ForgetPasswordState get initialState => ForgetPasswordState().init();
+        token = '',super(ForgetPasswordState().init());
 
   @override
   Stream<ForgetPasswordState> mapEventToState(

@@ -177,8 +177,8 @@ class UpdateReviewInfo extends CardListEvent {
 class CardListBloc extends Bloc<CardListEvent, CardListState> {
   final DeckService deckService = DI.get(DeckService);
   final SRSService srsService = DI.get(SRSService);
-  @override
-  CardListState get initialState => CardListState.init();
+
+  CardListBloc() : super(CardListState.init());
 
   @override
   Stream<CardListState> mapEventToState(CardListEvent event) async* {

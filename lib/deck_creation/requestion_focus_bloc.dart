@@ -64,10 +64,7 @@ class RequestionFocusText extends RequestionFocusState {
 
 class RequestionFocusBloc
     extends Bloc<RequestionFocusEvent, RequestionFocusState> {
-  RequestionFocusBloc();
-
-  @override
-  RequestionFocusState get initialState => InitRequestionFocusState();
+  RequestionFocusBloc() : super(InitRequestionFocusState());
 
   @override
   Stream<RequestionFocusState> mapEventToState(

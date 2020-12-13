@@ -39,7 +39,7 @@ class _LearningReviewScreenState extends State<LearningReviewScreen>
           height: hp(20),
         ),
         BlocListener(
-          bloc: learningBloc,
+          cubit: learningBloc,
           listener: (BuildContext context, state) {
             if (state is! ReviewListLoading) {
               if (refreshController.isLoading) {
@@ -50,7 +50,7 @@ class _LearningReviewScreenState extends State<LearningReviewScreen>
             }
           },
           child: BlocBuilder<LearningReviewBloc, ReviewListState>(
-            bloc: learningBloc,
+            cubit: learningBloc,
             builder: (context, state) {
               _initSliderItems(state.records);
               return Expanded(

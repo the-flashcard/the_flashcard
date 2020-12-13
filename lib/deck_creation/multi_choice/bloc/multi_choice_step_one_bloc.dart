@@ -14,7 +14,9 @@ class MCStepOneBloc extends Bloc<MCEvent, MCState> {
 
   core.MultiChoice get model => _model;
 
-  MCStepOneBloc.create() : _model = core.MultiChoice() {
+  MCStepOneBloc.create()
+      : _model = core.MultiChoice(),
+        super(InitState()) {
     _model.textConfig
       ..textAlign = TextAlign.left.index
       ..fontSize = 18
@@ -33,7 +35,9 @@ class MCStepOneBloc extends Bloc<MCEvent, MCState> {
       ..fontWeight = FontWeight.normal.index;
   }
 
-  MCStepOneBloc.edit(this._model) : _next = RequestionNextOn() {
+  MCStepOneBloc.edit(this._model)
+      : _next = RequestionNextOn(),
+        super(InitState()) {
     _componentsHasValue.addAll(this._model.answers);
     hasQuestion = true;
   }
@@ -158,7 +162,4 @@ class MCStepOneBloc extends Bloc<MCEvent, MCState> {
         yield EditQuestionAnswer();
     }
   }
-
-  @override
-  MCState get initialState => InitState();
 }

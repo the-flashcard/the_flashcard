@@ -23,8 +23,7 @@ class UploadBloc extends Bloc<UploadEvent, UploadState> {
 
   final String staticHost = Config.getStaticHost();
 
-  @override
-  UploadState get initialState => InitState();
+  UploadBloc() : super(InitState());
 
   @override
   Stream<UploadState> mapEventToState(UploadEvent event) async* {

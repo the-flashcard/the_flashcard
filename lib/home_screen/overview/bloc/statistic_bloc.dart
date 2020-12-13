@@ -19,11 +19,9 @@ class StatisticBloc extends Bloc<StatisticEvent, StatisticState> {
   int intervalInMin = Duration.minutesPerDay;
   int fromTime;
   int toTime;
-  StatisticBloc() {
+  StatisticBloc() : super(StatisticState.init()) {
     _updatePeriod(StatsTimePeriod.Today);
   }
-  @override
-  StatisticState get initialState => StatisticState.init();
 
   @override
   Stream<StatisticState> mapEventToState(

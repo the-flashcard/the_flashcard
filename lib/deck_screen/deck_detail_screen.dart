@@ -167,7 +167,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
         ),
       ),
       BlocBuilder<VotingBloc, VotingState>(
-        bloc: votingBloc,
+        cubit: votingBloc,
         builder: (context, state) {
           return InkWell(
             onTap: state is! Liking ? () => XError.f0(_onLikePressed) : null,
@@ -329,7 +329,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
           ),
           SizedBox(height: hp(20)),
           BlocBuilder<CardListBloc, CardListState>(
-            bloc: bloc,
+            cubit: bloc,
             builder: (context, cardListState) {
               if (cardListState.isCardLoaded) {
                 return Padding(
@@ -382,7 +382,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
     return Align(
       alignment: Alignment.bottomCenter,
       child: BlocBuilder<CardListBloc, CardListState>(
-        bloc: bloc,
+        cubit: bloc,
         builder: (context, cardListState) {
           if (cardListState.isCardLoaded && cardListState.hasCards()) {
             return Container(
@@ -452,11 +452,11 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
         child: MultiBlocListener(
           listeners: [
             BlocListener<VotingBloc, VotingState>(
-              bloc: votingBloc,
+              cubit: votingBloc,
               listener: _onLikedStateChanged,
             ),
             BlocListener<CardListBloc, CardListState>(
-              bloc: bloc,
+              cubit: bloc,
               listener: _onCardListStateChanged,
             )
           ],
@@ -478,7 +478,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
         core.Config.getString('msg_onboarding_learn');
 
     return BlocBuilder<CardListBloc, CardListState>(
-      bloc: bloc,
+      cubit: bloc,
       builder: (_, cardListState) {
         if (cardListState.isCardLoaded && cardListState.hasCards()) {
           return buildOnboarding(
@@ -611,7 +611,7 @@ class _DeckDetailScreenState extends XState<DeckDetailScreen> {
 
   Widget _buildFavorite(core.Deck deck, VotingBloc votingBloc) {
     return BlocBuilder<VotingBloc, VotingState>(
-      bloc: votingBloc,
+      cubit: votingBloc,
       builder: (context, state) {
         return XNumberIconWidget(
           icon: deck?.voteStatus == core.VoteStatus.Liked

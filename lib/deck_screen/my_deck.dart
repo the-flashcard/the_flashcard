@@ -5,12 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:tf_core/tf_core.dart' as core;
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/assets.dart';
-import 'package:the_flashcard/common/resources/dimens.dart';
-import 'package:the_flashcard/common/resources/xed_colors.dart';
-import 'package:the_flashcard/common/resources/xed_text_styles.dart';
 import 'package:the_flashcard/common/widgets/x_view_mode_chooser.dart';
-import 'package:the_flashcard/common/xwidgets/x_state.dart';
 import 'package:the_flashcard/deck_screen/deck_edit_screen.dart';
 import 'package:the_flashcard/deck_screen/deck_list_bloc.dart';
 import 'package:the_flashcard/deck_screen/deck_list_event.dart';
@@ -147,7 +142,7 @@ class _MyDeckState extends XState<MyDeck> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<DeckListBloc, DeckListState>(
-      bloc: deckBloc,
+      cubit: deckBloc,
       listener: (BuildContext context, DeckListState state) {
         if (state is! DeckListLoading) finishRefresh();
       },

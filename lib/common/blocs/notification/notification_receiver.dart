@@ -12,7 +12,7 @@ class NotificationReceiver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<NotificationBloc, NotificationState>(
-      bloc: DI.get(NotificationBloc),
+      cubit: DI.get(NotificationBloc),
       listener: (context, notificationState) {
         if (notificationState is NotificationShow) {
           XState.showSnakeBar(

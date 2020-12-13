@@ -28,7 +28,7 @@ class _OverviewState extends State<Overview> {
     );
 
     return BlocListener<StatisticBloc, StatisticState>(
-      bloc: bloc,
+      cubit: bloc,
       listener: _handleOnStateChange,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 16),

@@ -130,20 +130,20 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
             child: MultiBlocListener(
               listeners: [
                 BlocListener<CardListBloc, CardListState>(
-                  bloc: cardListBloc,
+                  cubit: cardListBloc,
                   listener: _onCardListStateChanged,
                 ),
                 BlocListener<DeckBloc, DeckState>(
-                  bloc: bloc,
+                  cubit: bloc,
                   listener: _onDeckStateChanged,
                 ),
                 BlocListener<UploadBloc, UploadState>(
-                  bloc: uploadBloc,
+                  cubit: uploadBloc,
                   listener: _onDCStateChange,
                 ),
               ],
               child: BlocBuilder<DeckBloc, DeckState>(
-                bloc: bloc,
+                cubit: bloc,
                 builder: (context, deckState) {
                   return Stack(
                     children: <Widget>[
@@ -159,7 +159,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
           ),
         ),
         BlocBuilder<UploadBloc, UploadState>(
-          bloc: uploadBloc,
+          cubit: uploadBloc,
           builder: (_, state) {
             return state is ImageUploading
                 ? Center(child: LoadingIndicator())
@@ -197,7 +197,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
       Opacity(
         opacity: widget.isCreation ? 0.2 : 1.0,
         child: BlocBuilder<VotingBloc, VotingState>(
-          bloc: votingBloc,
+          cubit: votingBloc,
           builder: (context, state) {
             return XedButtons.iconCircleButton(
               onTap: widget.isCreation
@@ -271,7 +271,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
               ),
               Spacer(),
               BlocBuilder<CardListBloc, CardListState>(
-                bloc: cardListBloc,
+                cubit: cardListBloc,
                 builder: (context, cardListState) {
                   return cardListState.loadCardCompleted
                       ? InkWell(
@@ -303,7 +303,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
           ),
           SizedBox(height: h20),
           BlocBuilder<CardListBloc, CardListState>(
-            bloc: cardListBloc,
+            cubit: cardListBloc,
             builder: (context, cardListState) {
               return Padding(
                 padding: EdgeInsets.only(bottom: hp(30), right: w15),
@@ -523,7 +523,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
     return Align(
       alignment: Alignment.bottomCenter,
       child: BlocBuilder<CardListBloc, CardListState>(
-        bloc: cardListBloc,
+        cubit: cardListBloc,
         builder: (context, cardListState) {
           if (cardListState.isCardLoaded && cardListState.hasCards()) {
             return Container(
@@ -729,7 +729,7 @@ class _DeckEditScreenState extends XState<DeckEditScreen> {
         core.Config.getString('msg_onboarding_create_card');
 
     return BlocBuilder<CardListBloc, CardListState>(
-      bloc: cardListBloc,
+      cubit: cardListBloc,
       builder: (context, cardListState) {
         return cardListState.loadCardCompleted
             ? buildOnboarding(

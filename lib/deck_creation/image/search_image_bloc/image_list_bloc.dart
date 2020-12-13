@@ -52,10 +52,7 @@ class ImageListBloc extends Bloc<ImageEvent, ImageListState> {
   final Set<String> selectedImages = {};
   final List<ImageRecord> images = [];
 
-  ImageListBloc(this.pageSize);
-
-  @override
-  ImageListState get initialState => ImageListState.empty();
+  ImageListBloc(this.pageSize): super(ImageListState.empty());
 
   @override
   Stream<ImageListState> mapEventToState(ImageEvent event) async* {

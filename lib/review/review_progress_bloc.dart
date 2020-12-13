@@ -23,10 +23,7 @@ class ReviewProgressBloc
     @required this.dueBloc,
     @required this.learningBloc,
     @required this.doneBloc,
-  });
-
-  @override
-  ReviewProgressState get initialState => ReviewProgressState.empty();
+  }) : super(ReviewProgressState.empty());
 
   @override
   Stream<ReviewProgressState> mapEventToState(

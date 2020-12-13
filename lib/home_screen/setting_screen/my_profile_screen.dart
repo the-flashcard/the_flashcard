@@ -44,7 +44,7 @@ class _MyProfileScreenState extends XState<MyProfileScreen> {
             margin: EdgeInsets.only(left: wp(42), right: wp(20)),
             child: SingleChildScrollView(
               child: BlocBuilder<AuthenticationBloc, AuthenticationState>(
-                bloc: authBloc,
+                cubit: authBloc,
                 builder: (context, state) {
                   if (state is Authenticated) {
                     loginData = state.loginData;
@@ -52,7 +52,7 @@ class _MyProfileScreenState extends XState<MyProfileScreen> {
                     core.Log.debug('avatar: ${userProfile.avatar}');
                   }
                   return BlocListener<UploadBloc, UploadState>(
-                    bloc: uploadBloc,
+                    cubit: uploadBloc,
                     listener: (context, state) async {
                       if (state is ImageUploadedSuccess) {
                         updateAvatar(state, loginData);

@@ -156,7 +156,7 @@ class PreviewCardIntroScreen extends StatelessWidget {
           height: 60,
           width: wp(175),
           child: BlocBuilder<CardListBloc, CardListState>(
-            bloc: bloc,
+            cubit: bloc,
             builder: (context, state) {
               bool enableButton = state.isCardLoaded &&
                   state.hasCards() &&

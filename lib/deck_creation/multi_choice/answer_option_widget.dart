@@ -107,7 +107,7 @@ class _AnswerOptionwidget extends XState<AnswerOptionWidget> {
   Widget build(BuildContext context) {
     index = bloc.answers.indexOf(widget.answer) + 1;
     return BlocListener<UploadBloc, UploadState>(
-      bloc: uploadBloc,
+      cubit: uploadBloc,
       listener: _onUploadStateChanged,
       child: hasBottomClear
           ? Stack(

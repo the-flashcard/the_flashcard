@@ -74,7 +74,7 @@ class _MCStepOneScreenState extends XState<MCStepOneScreen>
           child: MultiBlocListener(
             listeners: <BlocListener>[
               BlocListener(
-                bloc: bloc,
+                cubit: bloc,
                 listener: (_, state) {
                   if (state is RequestionNextScreen) {
                     Navigator.of(_).push(
@@ -97,7 +97,7 @@ class _MCStepOneScreenState extends XState<MCStepOneScreen>
                 },
               ),
               BlocListener<UploadBloc, dc.UploadState>(
-                bloc: uploadBloc,
+                cubit: uploadBloc,
                 listener: _onUploadStateChanged,
               ),
             ],
@@ -105,7 +105,7 @@ class _MCStepOneScreenState extends XState<MCStepOneScreen>
               children: [
                 AppbarStepOne(text: 'Create content'),
                 BlocBuilder<UploadBloc, UploadState>(
-                  bloc: uploadBloc,
+                  cubit: uploadBloc,
                   builder: (_, state) {
                     return Padding(
                       padding: EdgeInsets.only(top: hp(51)),
@@ -165,7 +165,7 @@ class _MCStepOneScreenState extends XState<MCStepOneScreen>
                             Align(
                               alignment: Alignment.bottomCenter,
                               child: BlocBuilder<MCStepOneBloc, MCState>(
-                                bloc: bloc,
+                                cubit: bloc,
                                 // condition: (_, state) {
                                 //   return state is InitState ||
                                 //       state is QuestionFocused ||
@@ -185,7 +185,7 @@ class _MCStepOneScreenState extends XState<MCStepOneScreen>
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: BlocBuilder<MCStepOneBloc, MCState>(
-                        bloc: bloc,
+                        cubit: bloc,
                         // condition: (_, state) {
                         //   return state is InitState ||
                         //       state is QuestionFocused ||
@@ -203,7 +203,7 @@ class _MCStepOneScreenState extends XState<MCStepOneScreen>
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: BlocBuilder<MCStepOneBloc, MCState>(
-                    bloc: bloc,
+                    cubit: bloc,
                     builder: (_, state) {
                       return stateFocused is FocusedState
                           ? SizedBox()

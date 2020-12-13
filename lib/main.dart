@@ -98,7 +98,7 @@ class _AppState extends XState<App> with WidgetsBindingObserver {
               create: (context) => DI.get(LearningReviewBloc))
         ],
         child: BlocBuilder<AuthenticationBloc, AuthenticationState>(
-          bloc: authenBloc,
+          cubit: authenBloc,
           builder: (BuildContext context, AuthenticationState state) {
             Dimens.context = context;
             switch (state.runtimeType) {

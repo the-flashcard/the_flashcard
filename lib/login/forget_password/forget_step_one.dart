@@ -24,7 +24,7 @@ class _ForgetStepOneState extends XState<ForgetStepOne> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ForgetPasswordBloc, ForgetPasswordState>(
-      bloc: widget.forgetBloc,
+      cubit: widget.forgetBloc,
       builder: (context, state) {
         return Column(
           children: <Widget>[

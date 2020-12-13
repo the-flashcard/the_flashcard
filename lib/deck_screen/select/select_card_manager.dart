@@ -34,7 +34,7 @@ class _SelectCardManagerState extends State<SelectCardManager> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<DeckBloc, DeckState>(
-      bloc: widget.bloc,
+      cubit: widget.bloc,
       builder: (_, state) {
         if (isDelete && !state.isLoading) {
           deck = state.deck;
@@ -183,7 +183,7 @@ class _SelectCardManagerState extends State<SelectCardManager> {
         backgroundColor: XedColors.white,
       ),
       body: BlocBuilder<CardListBloc, CardListState>(
-        bloc: widget.bloc.cardListBloc,
+        cubit: widget.bloc.cardListBloc,
         builder: (_, state) => Container(
           color: XedColors.white,
           child: Padding(

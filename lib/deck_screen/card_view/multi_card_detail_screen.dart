@@ -85,7 +85,7 @@ class _MultiCardDetailScreenState extends State<MultiCardDetailScreen> {
       ),
       body: BlocConsumer<CardListBloc, CardListState>(
         listener: _onCardListChanged,
-        bloc: cardListBloc,
+        cubit: cardListBloc,
         builder: (context, state) {
           if (state.isCardLoaded) {
             final cardDesign = state.getCard(currentCardIndex).design;

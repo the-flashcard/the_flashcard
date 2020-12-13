@@ -161,7 +161,7 @@ class _HomePageState extends XState<HomePage> with TickerProviderStateMixin {
 Widget _buildLogo({VoidCallback onTap}) {
   final AuthenticationBloc authenBloc = DI.get(AuthenticationBloc);
   return BlocBuilder<AuthenticationBloc, AuthenticationState>(
-    bloc: authenBloc,
+    cubit: authenBloc,
     builder: (context, state) {
       if (state is Authenticated) {
         String thumbnailUrl = state.loginData.userProfile?.avatar ?? '';

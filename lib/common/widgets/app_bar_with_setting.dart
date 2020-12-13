@@ -114,7 +114,7 @@ class AppBarWithSetting extends StatelessWidget implements PreferredSizeWidget {
   Widget _buildSaveButton() {
     return bloc != null
         ? BlocBuilder<DesignCardBloc, DesignState>(
-            bloc: bloc,
+            cubit: bloc,
             builder: (BuildContext context, DesignState state) {
               var style = bloc.hasChanges()
                   ? RegularTextStyle(18).copyWith(color: XedColors.waterMelon)

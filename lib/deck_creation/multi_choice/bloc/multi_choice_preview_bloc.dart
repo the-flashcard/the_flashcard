@@ -4,8 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:the_flashcard/deck_creation/multi_choice/bloc/multi_choice_bloc.dart';
 
 class MCPreviewBloc extends Bloc<MCEvent, MCState> {
-  @override
-  MCState get initialState => InitState();
+  MCPreviewBloc() : super(InitState());
 
   @override
   Stream<MCState> mapEventToState(MCEvent event) async* {

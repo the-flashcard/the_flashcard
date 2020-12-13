@@ -9,12 +9,10 @@ class MCStepTwoBloc extends Bloc<MCEvent, MCState> {
   List<Answer> get answers => choice.answers;
   MultiChoice choice;
 
-  MCStepTwoBloc.edit(this.choice) {
+  MCStepTwoBloc.edit(this.choice) : super(InitState()) {
     _getCorrectAnswer();
     nextScreen = _choices.isNotEmpty;
   }
-  @override
-  MCState get initialState => InitState();
 
   void _getCorrectAnswer() {
     choice.answers.forEach((item) {

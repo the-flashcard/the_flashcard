@@ -179,9 +179,7 @@ class VerifyBloc extends Bloc<VerifyEvent, VerifyState> {
 
   VerifyBloc({
     @required this.authenticationBloc,
-  });
-  @override
-  VerifyState get initialState => VerifyState.empty();
+  }) : super(VerifyState.empty());
 
   @override
   Stream<VerifyState> mapEventToState(VerifyEvent event) async* {

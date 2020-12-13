@@ -68,8 +68,7 @@ class DeckListFailure extends TrendingDeckState {
 class TrendingDeckBloc extends Bloc<DeckListEvent, TrendingDeckState> {
   static const TRENDING_DECK_SIZE = 20;
 
-  @override
-  TrendingDeckState get initialState => DeckListUnload();
+  TrendingDeckBloc() : super(DeckListUnload());
 
   @override
   Stream<TrendingDeckState> mapEventToState(DeckListEvent event) async* {
@@ -99,8 +98,7 @@ class TrendingDeckBloc extends Bloc<DeckListEvent, TrendingDeckState> {
 }
 
 class NewDeckBloc extends Bloc<DeckListEvent, TrendingDeckState> {
-  @override
-  TrendingDeckState get initialState => DeckListUnload();
+  NewDeckBloc() : super(DeckListUnload());
 
   @override
   Stream<TrendingDeckState> mapEventToState(DeckListEvent event) async* {

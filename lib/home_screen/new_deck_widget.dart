@@ -39,10 +39,10 @@ class _NewDeckState extends XState<NewDeckWidget> {
     final bloc = BlocProvider.of<NewDeckBloc>(context);
 
     return BlocListener(
-      bloc: bloc,
+      cubit: bloc,
       listener: (context, state) => _onStateChanged(context, state, bloc),
       child: BlocBuilder<NewDeckBloc, TrendingDeckState>(
-          bloc: bloc,
+          cubit: bloc,
           builder: (BuildContext context, TrendingDeckState state) {
             switch (state.runtimeType) {
               case DeckListLoaded:

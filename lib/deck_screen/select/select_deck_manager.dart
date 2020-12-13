@@ -67,16 +67,16 @@ class _MyDeckManagerState extends XState<MyDeckManager> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   BlocBuilder<MyDeckBloc, DeckListState>(
-                    bloc: deckBloc,
+                    cubit: deckBloc,
                     builder: (context, state) => _buildSelectedDecks(),
                   ),
                   BlocBuilder<MyDeckBloc, DeckListState>(
-                    bloc: deckBloc,
+                    cubit: deckBloc,
                     builder: (context, state) => _buildToolBar(context),
                   ),
                   Expanded(
                     child: BlocConsumer<MyDeckBloc, DeckListState>(
-                      bloc: deckBloc,
+                      cubit: deckBloc,
                       listener: (context, state) {
                         if (state is! DeckListLoading) {
                           refreshController.isLoading
@@ -194,7 +194,7 @@ class _MyDeckManagerState extends XState<MyDeckManager> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           BlocBuilder<MyDeckBloc, DeckListState>(
-            bloc: deckBloc,
+            cubit: deckBloc,
             builder: (context, state) {
               return InkWell(
                 onTap: (!isDeleting)

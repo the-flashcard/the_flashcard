@@ -208,8 +208,8 @@ class FacebookPressed extends LoginEvent {
 }
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  @override
-  LoginState get initialState => LoginState.empty();
+  LoginBloc() : super(LoginState.empty());
+
   @override
   Stream<LoginState> mapEventToState(LoginEvent event) async* {
     switch (event.runtimeType) {

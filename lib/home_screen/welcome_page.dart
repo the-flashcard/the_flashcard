@@ -76,9 +76,7 @@ class GoToProfileScreen extends NavigateEvent {}
 class PageNavigatorBloc extends Bloc<NavigateEvent, PageNavigateState> {
   int index = 0;
 
-  PageNavigatorBloc();
-  @override
-  PageNavigateState get initialState => PageNavigateState(0);
+  PageNavigatorBloc() : super(PageNavigateState(0));
 
   @override
   Stream<PageNavigateState> mapEventToState(NavigateEvent event) async* {
@@ -211,7 +209,7 @@ class _WelcomePage extends XState<WelcomePage> {
     return Scaffold(
       body: NotificationReceiver(
         child: BlocListener(
-          bloc: bloc,
+          cubit: bloc,
           listener: (_, state) {
             if (state is DeckNavigateState) {
               navigateToDeck(state.deck);
@@ -226,13 +224,13 @@ class _WelcomePage extends XState<WelcomePage> {
           child: Stack(
             children: <Widget>[
               BlocBuilder<PageNavigatorBloc, PageNavigateState>(
-                bloc: bloc,
+                cubit: bloc,
                 builder: (context, state) {
                   return tabs[state.index];
                 },
               ),
               BlocBuilder<PageNavigatorBloc, PageNavigateState>(
-                bloc: bloc,
+                cubit: bloc,
                 builder: (context, state) {
                   switch (state.index) {
                     case 1: // Global deck
@@ -262,7 +260,7 @@ class _WelcomePage extends XState<WelcomePage> {
         core.Config.getString('msg_onboarding_global_deck');
 
     return BlocBuilder<GlobalDeckBloc, DeckListState>(
-      bloc: globalDeckBloc,
+      cubit: globalDeckBloc,
       builder: (context, state) {
         return state.records?.isNotEmpty == true
             ? buildOnboarding(
@@ -291,7 +289,7 @@ class _WelcomePage extends XState<WelcomePage> {
     final String descriptionReview =
         core.Config.getString('msg_onboarding_review');
     return BlocBuilder<DueReviewBloc, ReviewListState>(
-      bloc: dueReviewBloc,
+      cubit: dueReviewBloc,
       builder: (context, state) {
         return state.records?.isNotEmpty == true
             ? buildOnboarding(
@@ -338,7 +336,7 @@ class _WelcomePage extends XState<WelcomePage> {
 
   Widget _bottomAppBar() {
     return BlocBuilder<PageNavigatorBloc, PageNavigateState>(
-      bloc: bloc,
+      cubit: bloc,
       builder: (context, state) {
         return BottomNavigationBar(
           type: BottomNavigationBarType.fixed,

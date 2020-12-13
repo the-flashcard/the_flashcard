@@ -36,7 +36,7 @@ class _DoneReviewScreenState extends State<DoneReviewScreen>
     return Column(
       children: <Widget>[
         BlocListener(
-          bloc: doneBloc,
+          cubit: doneBloc,
           listener: (BuildContext context, state) {
             if (state is! ReviewListLoading) {
               if (refreshController.isLoading) {
@@ -47,7 +47,7 @@ class _DoneReviewScreenState extends State<DoneReviewScreen>
             }
           },
           child: BlocBuilder<DoneReviewBloc, ReviewListState>(
-            bloc: doneBloc,
+            cubit: doneBloc,
             builder: (context, state) {
               _initSliderItems(state.records);
               return Expanded(

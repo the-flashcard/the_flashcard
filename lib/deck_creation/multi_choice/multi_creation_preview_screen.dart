@@ -26,7 +26,7 @@ class _MultiCreationPreviewScreenState
       resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: BlocListener(
-          bloc: bloc,
+          cubit: bloc,
           listener: (_, state) {
             if (state is CompletedState) {
               Navigator.of(context).pop();

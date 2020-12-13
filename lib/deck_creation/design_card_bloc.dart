@@ -118,20 +118,17 @@ class DesignCardBloc extends Bloc<DesignCardEvent, DesignState> {
 
   final _flipControllers = <FlipController>[];
 
-  DesignCardBloc.create(this.deckBloc) {
+  DesignCardBloc.create(this.deckBloc):super(DesignInitState()) {
     design = CardDesign();
     design.createFrontIfEmpty();
     _initKeys();
   }
 
-  DesignCardBloc.edit(this.deckBloc, this.originCard) {
+  DesignCardBloc.edit(this.deckBloc, this.originCard) :super(DesignInitState()){
     design = originCard?.design ?? CardDesign();
     design.createFrontIfEmpty();
     _initKeys();
   }
-
-  @override
-  DesignState get initialState => DesignInitState();
 
   void _initKeys() {
     design.fronts.forEach((front) {

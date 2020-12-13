@@ -56,7 +56,7 @@ class _GlobalDeckState extends XState<GlobalDeck> {
       padding: EdgeInsets.only(top: 30.0),
       height: wp(98),
       child: BlocBuilder<CategoryBloc, cs.CategoryState>(
-        bloc: categoryBloc,
+        cubit: categoryBloc,
         builder: (BuildContext context, cs.CategoryState state) {
           if (state is cs.Loaded) {
             return CategorySlider(
@@ -75,7 +75,7 @@ class _GlobalDeckState extends XState<GlobalDeck> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer(
-      bloc: deckBloc,
+      cubit: deckBloc,
       listener: (BuildContext context, DeckListState state) {
         if (categoryBloc.state is cs.NotLoaded) {
           categoryBloc.add(SearchGlobalCategory());

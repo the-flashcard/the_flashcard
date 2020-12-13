@@ -226,8 +226,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final AuthService authService = DI.get(AuthService);
   final AuthenticationBloc authenticationBloc = DI.get(AuthenticationBloc);
 
-  @override
-  RegisterState get initialState => RegisterState.empty();
+  RegisterBloc() : super(RegisterState.empty());
 
   @override
   Stream<RegisterState> mapEventToState(RegisterEvent event) async* {

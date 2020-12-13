@@ -129,9 +129,7 @@ class LearnCardBloc extends Bloc<LearnCardEvent, LearnCardState> {
     @required this.dueCardCubit,
     @required this.learningCardCubit,
     @required this.doneCardCubit,
-  });
-  @override
-  LearnCardState get initialState => LearnCardState.init();
+  }) : super(LearnCardState.init());
   @override
   Stream<LearnCardState> mapEventToState(LearnCardEvent event) async* {
     switch (event.runtimeType) {

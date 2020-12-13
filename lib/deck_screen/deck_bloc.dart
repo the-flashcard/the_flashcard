@@ -193,7 +193,7 @@ class DeckBloc extends Bloc<DeckEvent, DeckState> {
   Deck deck;
 
   DeckBloc.create(this.cardListBloc, this.myDeckBloc, this.globalDeckBloc,
-      this.trendingDeckBloc, this.newDeckBloc);
+      this.trendingDeckBloc, this.newDeckBloc):super(DeckState.init());
 
   DeckBloc.edit(
     this.cardListBloc,
@@ -202,11 +202,8 @@ class DeckBloc extends Bloc<DeckEvent, DeckState> {
     this.trendingDeckBloc,
     this.newDeckBloc,
     this.deck,
-  );
+  ):super(DeckState.created(deck)) ;
 
-  @override
-  DeckState get initialState =>
-      deck == null ? DeckState.init() : DeckState.created(deck);
   @override
   Stream<DeckState> mapEventToState(DeckEvent event) async* {
     switch (event.runtimeType) {

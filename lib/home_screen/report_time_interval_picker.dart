@@ -24,7 +24,7 @@ class _ReportTimeIntervalPickerState extends State<ReportTimeIntervalPicker> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<StatisticBloc, StatisticState>(
-      bloc: widget.bloc,
+      cubit: widget.bloc,
       builder: (context, statisticState) {
         return Container(
           margin: EdgeInsets.only(top: 13),

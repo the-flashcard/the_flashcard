@@ -80,9 +80,7 @@ class VotingBloc extends Bloc<VotingEvent, VotingState> {
   final FavoriteDeckBloc favoriteDeckBloc;
   final TrendingDeckBloc trendingDeckBloc;
 
-  VotingBloc(this.favoriteDeckBloc, this.trendingDeckBloc);
-  @override
-  VotingState get initialState => VotingInit();
+  VotingBloc(this.favoriteDeckBloc, this.trendingDeckBloc): super(VotingInit());
 
   @override
   Stream<VotingState> mapEventToState(VotingEvent event) async* {

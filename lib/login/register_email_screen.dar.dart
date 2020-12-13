@@ -57,7 +57,7 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocConsumer<RegisterBloc, RegisterState>(
-        bloc: bloc,
+        cubit: bloc,
         listener: _onStateChanged,
         builder: (_, state) {
           return Stack(

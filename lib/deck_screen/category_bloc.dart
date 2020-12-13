@@ -7,8 +7,7 @@ import 'package:the_flashcard/deck_screen/category_event.dart';
 import 'package:the_flashcard/deck_screen/category_state.dart';
 
 class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
-  @override
-  CategoryState get initialState => NotLoaded();
+  CategoryBloc() : super(NotLoaded());
 
   @override
   Stream<CategoryState> mapEventToState(CategoryEvent event) async* {

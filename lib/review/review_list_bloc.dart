@@ -37,9 +37,7 @@ class ReviewListLoading extends ReviewListState {
 abstract class ReviewListBloc extends Bloc<ReviewListEvent, ReviewListState> {
   final int pageSize;
 
-  ReviewListBloc(this.pageSize);
-  @override
-  ReviewListState get initialState => ReviewListState.empty();
+  ReviewListBloc(this.pageSize): super(ReviewListState.empty());
 
   @override
   Stream<ReviewListState> mapEventToState(ReviewListEvent event) async* {

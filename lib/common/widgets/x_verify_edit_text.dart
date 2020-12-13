@@ -103,10 +103,10 @@ class _XVerifyEditTextViewState extends State<XVerifyEditTextView> {
     }
 
     return BlocListener(
-      bloc: bloc,
+      cubit: bloc,
       listener: (context, state) => _onStateChanged(context, state),
       child: BlocBuilder<VerifyFieldBloc, VerifyFieldState>(
-        bloc: bloc,
+        cubit: bloc,
         builder: (BuildContext context, VerifyFieldState state) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -241,11 +241,8 @@ class DigitDeleted extends VerifyFieldEvent {
 class VerifyFieldBloc extends Bloc<VerifyFieldEvent, VerifyFieldState> {
   final int totalNumberOfDigits;
 
-  VerifyFieldBloc(this.totalNumberOfDigits);
-
-  @override
-  VerifyFieldState get initialState =>
-      VerifyFieldState.empty(totalNumberOfDigits: totalNumberOfDigits);
+  VerifyFieldBloc(this.totalNumberOfDigits)
+      : super(VerifyFieldState.empty(totalNumberOfDigits: totalNumberOfDigits));
 
   @override
   Stream<VerifyFieldState> mapEventToState(VerifyFieldEvent event) async* {

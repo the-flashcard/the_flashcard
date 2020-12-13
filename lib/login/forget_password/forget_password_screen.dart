@@ -51,7 +51,7 @@ class _ForgetPasswordScreenState extends XState<ForgetPasswordScreen> {
             showErrorSnakeBar(state.errorMessage, context: context);
           }
         },
-        bloc: forgetBloc,
+        cubit: forgetBloc,
         builder: (context, state) {
           return Scaffold(
             appBar: AppbarStepWidget(

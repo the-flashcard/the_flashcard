@@ -36,7 +36,7 @@ class StatisticTab extends StatelessWidget {
                   child: Text('Overview', style: SemiBoldTextStyle(16)),
                 ),
                 BlocBuilder<StatisticBloc, StatisticState>(
-                  bloc: statisticBloc,
+                  cubit: statisticBloc,
                   builder: (context, statisticState) {
                     var done = statisticState.doneCards;
                     var learning = statisticState.learningCards;

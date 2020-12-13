@@ -28,7 +28,7 @@ class _MCStepTwoScreenState extends State<MCStepTwoScreen> {
     final double spacer = hp(44);
     controller.text = bloc.choice.question;
     return BlocListener(
-      bloc: bloc,
+      cubit: bloc,
       listener: (_, MCState state) {
         if (state is RequestionPreviousScreen) Navigator.of(context).pop();
         if (state is RequestionNextScreen)
@@ -71,8 +71,8 @@ class _MCStepTwoScreenState extends State<MCStepTwoScreen> {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: BlocBuilder<MCStepTwoBloc, MCState>(
-                    bloc: bloc,
-                    condition: (_, state) {
+                    cubit: bloc,
+                    buildWhen: (_, state) {
                       return state is InitState ||
                           state is RequestionNextOn ||
                           state is RequestionNextOff;

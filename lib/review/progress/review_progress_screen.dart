@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:ddi/di.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 import 'package:tf_core/tf_core.dart' as core;
@@ -58,9 +59,9 @@ class _ReviewProgressScreenState extends XState<ReviewProgressScreen> {
     stopwatch = Stopwatch()..start();
     cardListBloc = CardListBloc();
     reviewProgressBloc = ReviewProgressBloc(
-      dueBloc: BlocProvider.of<DueReviewBloc>(context),
-      learningBloc: BlocProvider.of<LearningReviewBloc>(context),
-      doneBloc: BlocProvider.of<DoneReviewBloc>(context),
+      dueBloc: DI.get<DueReviewBloc>(DueReviewBloc),
+      learningBloc: DI.get<LearningReviewBloc>(LearningReviewBloc),
+      doneBloc: DI.get<DoneReviewBloc>(DoneReviewBloc),
     );
     numberOfPages = widget.cardIds.length;
     pageController = PageController();
@@ -132,7 +133,7 @@ class _ReviewProgressScreenState extends XState<ReviewProgressScreen> {
         ),
       ),
       body: BlocBuilder<CardListBloc, CardListState>(
-        bloc: cardListBloc,
+        cubit: cardListBloc,
         builder: (BuildContext context, CardListState state) {
           if (state.isCardLoaded) {
             return PageView.builder(
@@ -146,7 +147,7 @@ class _ReviewProgressScreenState extends XState<ReviewProgressScreen> {
                 final back = frontAndBack.value;
 
                 return BlocBuilder(
-                  bloc: reviewProgressBloc,
+                  cubit: reviewProgressBloc,
                   builder: (BuildContext context, ReviewProgressState state) {
                     if (state is ReviewProgressState) {
                       currentReviewInfo = state.reviewInfo;

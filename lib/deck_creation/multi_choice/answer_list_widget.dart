@@ -27,7 +27,7 @@ class _AnswerListWidgetState extends State<AnswerListWidget> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<MCStepOneBloc, MCState>(
-      bloc: bloc,
+      cubit: bloc,
       listener: (_, state) {
         if (state is AddAnswerOption) {
           _addAnswerComponent(state.component);

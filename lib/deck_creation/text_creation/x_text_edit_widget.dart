@@ -53,7 +53,7 @@ class _XTextEditWidgetState extends State<XTextEditWidget>
   @override
   Widget build(BuildContext context) {
     return BlocListener<RequestionFocusBloc, RequestionFocusState>(
-      bloc: widget.bloc,
+      cubit: widget.bloc,
       listener: (context, RequestionFocusState state) {
         if (state is RequestionFocusText && state.key == widget.key) {
           // this._onTapTextField(context);

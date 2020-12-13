@@ -35,7 +35,7 @@ dependencies:
   flare_flutter: 2.0.1
   flip: 1.0.0
   flutter_animation_progress_bar: 1.0.0
-  flutter_bloc: 3.2.0
+  flutter_bloc: 6.1.1
   flutter_cache_manager: 2.0.0
   flutter_circular_chart: 0.1.0
   flutter_custom_clippers: 1.1.0

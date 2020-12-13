@@ -89,7 +89,7 @@ class _FavoriteDeckState extends XState<FavoriteDeck> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<DeckListBloc, DeckListState>(
-      bloc: deckBloc,
+      cubit: deckBloc,
       listener: (BuildContext context, DeckListState state) {
         if (state is! DeckListLoading) finishRefresh();
       },

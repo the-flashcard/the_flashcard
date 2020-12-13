@@ -46,7 +46,7 @@ class _ForgetStepTwoState extends XState<ForgetStepTwo> {
     var width103 = wp(103);
     var width20 = wp(20);
     return BlocBuilder<ForgetPasswordBloc, ForgetPasswordState>(
-      bloc: widget.forgetBloc,
+      cubit: widget.forgetBloc,
       builder: (_, state) {
         return SingleChildScrollView(
           child: Column(

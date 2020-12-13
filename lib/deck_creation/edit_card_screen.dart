@@ -151,18 +151,18 @@ class _EditCardScreenState extends XState<EditCardScreen>
                 child: MultiBlocListener(
                   listeners: [
                     BlocListener<UploadBloc, UploadState>(
-                      bloc: uploadBloc,
+                      cubit: uploadBloc,
                       listener: _onUploadStateChanged,
                     ),
                     BlocListener<DesignCardBloc, DesignState>(
-                      bloc: designCardBloc,
+                      cubit: designCardBloc,
                       listener: _onDesignCardStateChanged,
                     )
                   ],
                   child: Stack(
                     children: [
                       BlocBuilder<UploadBloc, UploadState>(
-                        bloc: uploadBloc,
+                        cubit: uploadBloc,
                         builder: (_, state) {
                           return state is UploadingState
                               ? XProgressIndicator(percen: state.percen)
@@ -172,7 +172,7 @@ class _EditCardScreenState extends XState<EditCardScreen>
                       Column(
                         children: [
                           BlocBuilder<DesignCardBloc, DesignState>(
-                            bloc: designCardBloc,
+                            cubit: designCardBloc,
                             builder: (context, designState) {
                               return Expanded(
                                 child: Center(
@@ -193,7 +193,7 @@ class _EditCardScreenState extends XState<EditCardScreen>
                             )
                           : SizedBox(),
                       BlocBuilder<DesignCardBloc, DesignState>(
-                        bloc: designCardBloc,
+                        cubit: designCardBloc,
                         builder: (context, designState) {
                           if (designState is DesignSavingState) {
                             return Container(
@@ -223,7 +223,7 @@ class _EditCardScreenState extends XState<EditCardScreen>
 
   Widget _buildBottomToolboxWidgets() {
     return BlocBuilder<DesignCardBloc, DesignState>(
-      bloc: designCardBloc,
+      cubit: designCardBloc,
       builder: (context, designState) {
         return Container(
           margin: EdgeInsets.only(bottom: hp(2)),

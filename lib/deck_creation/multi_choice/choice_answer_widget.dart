@@ -41,8 +41,8 @@ class ChoiceAnswerWidget extends StatelessWidget {
   Widget _buildAnswer(BuildContext context) {
     final bloc = BlocProvider.of<MCStepTwoBloc>(context);
     return BlocBuilder<MCStepTwoBloc, MCState>(
-      bloc: bloc,
-      condition: (_, MCState state) {
+      cubit: bloc,
+      buildWhen: (_, MCState state) {
         return state is InitState || state is RequestionChangeButton;
       },
       builder: (_, MCState state) {

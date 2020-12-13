@@ -14,8 +14,7 @@ class NotificationType {
 }
 
 class NotificationBloc extends Bloc<NotificationEvent, NotificationState> {
-  @override
-  NotificationState get initialState => NotificationHide();
+  NotificationBloc() : super(NotificationHide());
 
   @override
   Stream<NotificationState> mapEventToState(NotificationEvent event) async* {

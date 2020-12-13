@@ -128,7 +128,7 @@ class _SearchDeckScreenState extends XState<SearchDeckScreen> {
 
   Widget _buildListDeck() {
     return BlocConsumer<DeckListBloc, DeckListState>(
-      bloc: deckListBloc,
+      cubit: deckListBloc,
       listener: (BuildContext context, DeckListState state) {
         if (state is! DeckListLoading) _finishRefresh();
       },

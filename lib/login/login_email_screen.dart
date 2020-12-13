@@ -52,7 +52,7 @@ class _LoginEmailScreenState extends XState<LoginEmailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocConsumer<LoginBloc, LoginState>(
-        bloc: bloc,
+        cubit: bloc,
         listener: _onStateChanged,
         builder: (_, state) {
           return Stack(

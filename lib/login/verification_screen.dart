@@ -61,10 +61,10 @@ class _VerificationScreenState extends XState<VerificationScreen> {
           ),
         ),
         body: BlocListener(
-          bloc: verifyBloc,
+          cubit: verifyBloc,
           listener: (context, state) => _onVerifiedStateChanged(context, state),
           child: BlocBuilder<VerifyBloc, VerifyState>(
-              bloc: verifyBloc,
+              cubit: verifyBloc,
               builder: (BuildContext context, VerifyState state) {
                 return SingleChildScrollView(
                   child: Center(

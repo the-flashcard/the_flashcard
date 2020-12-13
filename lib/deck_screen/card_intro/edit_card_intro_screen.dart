@@ -98,13 +98,13 @@ class _EditCardIntroScreenState extends XState<EditCardIntroScreen>
       body: WillPopScope(
         onWillPop: _onButtonBackPress,
         child: BlocListener<UploadBloc, UploadState>(
-          bloc: uploadBloc,
+          cubit: uploadBloc,
           listener: _onStateChange,
           child: SafeArea(
             child: Stack(
               children: <Widget>[
                 BlocBuilder<UploadBloc, UploadState>(
-                  bloc: uploadBloc,
+                  cubit: uploadBloc,
                   builder: (_, state) {
                     return state is UploadingState
                         ? XProgressIndicator(percen: state.percen)

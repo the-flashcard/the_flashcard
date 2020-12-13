@@ -48,10 +48,7 @@ abstract class DeckListBloc extends Bloc<DeckListEvent, DeckListState> {
 
   final int pageSize;
 
-  DeckListBloc(this.pageSize);
-
-  @override
-  DeckListState get initialState => DeckListState.empty();
+  DeckListBloc(this.pageSize): super(DeckListState.empty());
 
   bool get isAllSelected {
     var total = state.records.length;

@@ -326,6 +326,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       } else {
         LoginData loginData = await authService.registerAndLogin(
             event.email, event.password, event.fullName);
+        AuthenticationBloc authenticationBloc = DI.get(AuthenticationBloc);
         authenticationBloc.add(LoggedIn(loginData));
         yield RegisterState.success(loginData.userProfile);
       }

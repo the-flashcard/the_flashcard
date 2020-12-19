@@ -1,7 +1,6 @@
 import 'package:ddi/di.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
@@ -342,16 +341,16 @@ class _LearnCardScreenState extends XState<LearnCardScreen> {
 
   void _gotoReview() async {
     closeUntilRootScreen();
-    var welcomePageBloc = BlocProvider.of<PageNavigatorBloc>(context);
+    var welcomePageBloc = DI.get<PageNavigatorBloc>(PageNavigatorBloc);
     if (welcomePageBloc != null) {
-      BlocProvider.of<DueReviewBloc>(context).add(RefreshReview());
+      DI.get<DueReviewBloc>(DueReviewBloc).add(RefreshReview());
       welcomePageBloc.add(GotoReviewPage());
     }
   }
 
   void _close() async {
     core.Log.debug('close');
-    BlocProvider.of<DueReviewBloc>(context)?.add(RefreshReview());
+    DI.get<DueReviewBloc>(DueReviewBloc)?.add(RefreshReview());
     closeScreen(LearnCardScreen.name);
   }
 }

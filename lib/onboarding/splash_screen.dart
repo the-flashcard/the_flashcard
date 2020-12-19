@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flashcard/common/common.dart';
-import 'package:the_flashcard/common/resources/assets.dart';
 import 'package:the_flashcard/common/resources/dimens.dart';
 import 'package:the_flashcard/common/resources/xed_colors.dart';
 
@@ -24,8 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Center(
-            child: SvgPicture.asset(
-              Assets.icLogoPortrait,
+            child: Container(
               height: 150,
               width: 150,
             ),

@@ -199,6 +199,8 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                           hintText: "Password",
                                           node: passwordNode,
                                           controller: passwordController,
+                                          onSubmitted: (_) =>
+                                              fullNameNode.requestFocus(),
                                         ),
                                       ),
                                       !state.isPasswordValid
@@ -219,7 +221,7 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                             )
                                           : SizedBox(),
                                       Container(
-                                        margin: EdgeInsets.only(top: 40),
+                                        margin: EdgeInsets.only(top: 12),
                                         child: XTextFieldWidget(
                                           color: XedColors.black10,
                                           textInputType: TextInputType.text,
@@ -239,10 +241,8 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                             fontSize: 16,
                                           ),
                                           hintText: "Your name",
-                                          node: emailNode,
-                                          controller: emailController,
-                                          onSubmitted: (_) =>
-                                              passwordNode.requestFocus(),
+                                          node: fullNameNode,
+                                          controller: fullNameController,
                                         ),
                                       ),
                                       Container(
@@ -255,7 +255,7 @@ class _RegisterEmailScreenState extends XState<RegisterEmailScreen> {
                                                 MainAxisAlignment.center,
                                             children: <Widget>[
                                               Text(
-                                                "Sign in",
+                                                "Sign up",
                                                 style: SemiBoldTextStyle(18)
                                                     .copyWith(
                                                   color: XedColors.white255,

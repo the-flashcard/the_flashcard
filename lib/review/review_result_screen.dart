@@ -1,8 +1,8 @@
 import 'dart:math';
 
+import 'package:ddi/di.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_circular_chart/flutter_circular_chart.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tf_core/tf_core.dart' as core;
@@ -285,7 +285,7 @@ class _ReviewResultScreenState extends XState<ReviewResultScreen> {
   void _goToReviewScreen() {
     core.Log.debug('review_result_screen:: _goToReview');
     // ignore: close_sinks
-    final welcomePageBloc = BlocProvider.of<PageNavigatorBloc>(context);
+    final welcomePageBloc = DI.get<PageNavigatorBloc>(PageNavigatorBloc);
     if (welcomePageBloc != null) welcomePageBloc.add(GotoReviewPage());
     closeUntilRootScreen();
   }
@@ -297,12 +297,12 @@ class _ReviewResultScreenState extends XState<ReviewResultScreen> {
   }
 
   void finishReview() {
-    var dueBloc = BlocProvider.of<DueReviewBloc>(context);
+    var dueBloc = DI.get<DueReviewBloc>(DueReviewBloc);
     dueBloc.add(RefreshReview());
 
-    BlocProvider.of<LearningReviewBloc>(context).add(RefreshReview());
+    DI.get<LearningReviewBloc>(LearningReviewBloc).add(RefreshReview());
 
-    BlocProvider.of<DoneReviewBloc>(context).add(RefreshReview());
+    DI.get<DoneReviewBloc>(DoneReviewBloc).add(RefreshReview());
 
     widget.isQuizMode ? _goToDetailScreen() : _goToReviewScreen();
   }

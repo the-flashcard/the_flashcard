@@ -369,11 +369,14 @@ class _MyDeckManagerState extends XState<MyDeckManager> {
 
         deckBloc.add(RemoveDeck(Set.from(deletedDeckIds)));
 
-        BlocProvider.of<MyDeckBloc>(context)
+        DI
+            .get<MyDeckBloc>(MyDeckBloc)
             .add(RemoveDeck(Set.from(deletedDeckIds)));
-        BlocProvider.of<GlobalDeckBloc>(context)
+        DI
+            .get<GlobalDeckBloc>(GlobalDeckBloc)
             .add(RemoveDeck(Set.from(deletedDeckIds)));
-        BlocProvider.of<FavoriteDeckBloc>(context)
+        DI
+            .get<FavoriteDeckBloc>(FavoriteDeckBloc)
             .add(RemoveDeck(Set.from(deletedDeckIds)));
       }
     } catch (e) {
